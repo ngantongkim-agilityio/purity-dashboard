@@ -1,6 +1,7 @@
-import Head from "next/head";
-import { GetStaticProps } from "next";
-import styles from "../../styles/Home.module.css";
+import Head from 'next/head';
+import Link from 'next/link';
+import { GetStaticProps } from 'next';
+import styles from '../../styles/Home.module.css';
 
 const Blog = ({ posts }) => {
   return (
@@ -13,17 +14,39 @@ const Blog = ({ posts }) => {
       <main className={styles.main}>
         <h1 className={styles.title}>Post List</h1>
 
-        <div className={styles.grid}>
+        <ul className={styles.grid}>
           {posts.map((post) => (
-            <a key={post.id} href={`/posts/${post.id}`} className={styles.card}>
-              <h3>{`Page ${post.id}`}</h3>
-            </a>
-          ))}
-        </div>
+            <li key={post.id} className={styles.card}>
+              {/* <Link href={`/posts/${post.id}`}> */}
+              <Link
+                href={{
+                  pathname: '/posts/[[...id]]',
+                  query: { id: ['test', post.id], name: post.name },
+                }}
 
-        <a href="/" className={styles.card}>
-          <h3>Home</h3>
-        </a>
+                // href={{
+                //   pathname: '/posts/[...id]',
+                //   query: { id: ['test', post.id]},
+                // }}
+
+                // href={{
+                //   pathname: '/posts/[id]',
+                //   query: { id: post.id, name: post.name },
+                // }}
+              >
+                <a>
+                  <h3>{`Page ${post.id}`}</h3>
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <Link href="/">
+          <a className={styles.card}>
+            <h3>Home</h3>
+          </a>
+        </Link>
       </main>
 
       <footer className={styles.footer}>Copyright by Nakito</footer>
