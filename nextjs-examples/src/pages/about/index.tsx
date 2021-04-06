@@ -1,8 +1,14 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Button } from '@/components/Button';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Home.module.css';
+
+const DynamicComponent = dynamic(
+  () => import('../../components/Button').then((mod) => mod.Button),
+  { loading: () => <p>...loading</p> }
+);
 
 const About = () => {
   const router = useRouter();
@@ -14,7 +20,7 @@ const About = () => {
 
   useEffect(() => {
     // The counter changed!
-  }, [router.query.counter])
+  }, [router.query.counter]);
 
   return (
     <div className={styles.container}>
@@ -25,14 +31,11 @@ const About = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Nakito Tong</h1>
-        {/* <Link href="/">
+        <DynamicComponent>
           <a className={styles.card}>
-            <h3>Home</h3>
+            <span onClick={() => router.push('/')}>Click here to Home</span>
           </a>
-        </Link> */}
-        <a className={styles.card}>
-          <span onClick={() => router.push('/')}>Click here to Home</span>
-        </a>
+        </DynamicComponent>
       </main>
 
       <footer className={styles.footer}>Copyright by Nakito</footer>

@@ -30,7 +30,7 @@ const Post = ({ post }) => {
 
 // This function gets called at build time
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  console.log('TEST PARAM', params);
+  console.log('PARAM', params);
   const res = await fetch(`${process.env.DB_HOST}/${params.id[1]}`);
   const post = await res.json();
 
@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 // This function gets called at build time
 export const getStaticPaths: GetStaticPaths = async () => {
-  console.log('TEST Paths');
+  console.log('Paths');
   const res = await fetch(process.env.DB_HOST);
   let posts = await res.json();
   const paths = posts.map((post) => ({
