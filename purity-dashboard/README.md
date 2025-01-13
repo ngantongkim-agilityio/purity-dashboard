@@ -40,11 +40,11 @@
 
 ## Design 
 
-- [Figma]([<https://www.figma.com/design/fm7G2jYC6DfCX93wk8Zi3z/CareMate-(Community)?node-id=0-1&node-type=canvas&t=wkw1y108oira6rwi-0>](https://www.figma.com/design/g7r1sI5WpdO7v4kigAOs65/Purity-UI-Dashboard---Chakra-UI-Dashboard-(Community)?node-id=0-1&p=f&t=IDPROBTorOCzbwfP-0))
+- [Figma](https://www.figma.com/design/g7r1sI5WpdO7v4kigAOs65/Purity-UI-Dashboard---Chakra-UI-Dashboard-(Community)?node-id=0-1&p=f&t=KUohg66aetSJp6IK-0)
 
 ## Requirements
 
-Build a web application to manage authors:
+Build a Purity dashboard to manage authors:
 - Support dark/light mode
 - User can register new account
 - User can login with created account
@@ -96,7 +96,7 @@ Make sure you install packages with correct version below:
 - [node v20.0.0+](https://nodejs.org/en/download/package-manager)
 - [pnpm 9.6.0+](https://pnpm.io/installation)
 
-- **Note:**:
+- **Note:**
   - Please add `.env` into root of project source code, refer `.env.sample`.
 
 ### Get source code
