@@ -1,0 +1,2 @@
+cd purity-dashboard/
+pnpm build

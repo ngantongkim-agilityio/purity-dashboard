@@ -1,11 +1,12 @@
-# **NEXTJS 15 PRACTICE
+# \*\*NEXTJS 15 PRACTICE
+
 ## Overview
 
 - This document provides the requirements, technical stack and estimate detail features for Practice apply NextJS 15
 
 ## Timeline
 
-- 7 days (01/13/2025 -  21/01/2025)
+- 7 days (01/13/2025 - 21/01/2025)
 
 ## Team size
 
@@ -38,13 +39,14 @@
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Vercel](https://vercel.com)
 
-## Design 
+## Design
 
-- [Figma](https://www.figma.com/design/g7r1sI5WpdO7v4kigAOs65/Purity-UI-Dashboard---Chakra-UI-Dashboard-(Community)?node-id=0-1&p=f&t=KUohg66aetSJp6IK-0)
+- [Figma](<https://www.figma.com/design/g7r1sI5WpdO7v4kigAOs65/Purity-UI-Dashboard---Chakra-UI-Dashboard-(Community)?node-id=0-1&p=f&t=KUohg66aetSJp6IK-0>)
 
 ## Requirements
 
 Build a Purity dashboard to manage authors:
+
 - Support dark/light mode
 - User can register new account
 - User can login with created account
@@ -86,7 +88,6 @@ Build a Purity dashboard to manage authors:
 ├── tsconfig.json
 ```
 
-
 ## How to run?
 
 ### Prerequisites
@@ -101,17 +102,17 @@ Make sure you install packages with correct version below:
 
 ### Get source code
 
-| Command                                                                           | Action                      |
-| :-------------------------------------------------------------------------------- | :-------------------------- |
+| Command                                                                        | Action                      |
+| :----------------------------------------------------------------------------- | :-------------------------- |
 | `$ git clone https://gitlab.asoft-python.com/ngan.tongkim/nextjs-training.git` | Clone Repository with HTTPS |
 | `$ git clone git@gitlab.asoft-python.com:ngan.tongkim/nextjs-training.git`     | Clone Repository with SSH   |
-| `$ cd purity-dashboard`                                                          | Redirect to folder          |
+| `$ cd purity-dashboard`                                                        | Redirect to folder          |
 
 ### Build and Run app
 
-| Command            | Action                                     | Port                  |
-| :----------------- | :----------------------------------------- | :-------------------- |
-| `$ pnpm install`   | Install packages dependencies              | N/A                   |
-| `$ pnpm build`     | Build app with optimized production mode   | N/A                   |
-| `$ pnpm start`     | Starts the application in production mode. | http://localhost:3000 |
-| `$ pnpm dev`       | Run the app in development mode            | http://localhost:3000 |
+| Command          | Action                                     | Port                  |
+| :--------------- | :----------------------------------------- | :-------------------- |
+| `$ pnpm install` | Install packages dependencies              | N/A                   |
+| `$ pnpm build`   | Build app with optimized production mode   | N/A                   |
+| `$ pnpm start`   | Starts the application in production mode. | http://localhost:3000 |
+| `$ pnpm dev`     | Run the app in development mode            | http://localhost:3000 |

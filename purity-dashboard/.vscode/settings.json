@@ -1,0 +1,10 @@
+{
+  "cSpell.ignoreWords": ["nextjs", "tailwindcss"],
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript", "typescript"],
+  "eslint.nodePath": "./node_modules/eslint"
+}
