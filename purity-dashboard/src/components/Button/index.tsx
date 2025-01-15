@@ -1,31 +1,33 @@
 'use client';
 
-import { memo } from 'react';
 import { extendVariants, Button as ButtonNextUI } from '@nextui-org/react';
 
-export const Button = memo(
-  extendVariants(ButtonNextUI, {
-    variants: {
-      variant: {
-        solid: 'border-transparent font-semibold',
-        outline:
-          'border-1 border-secondary-300 hover:bg-linear-success hover:text-content1 font-semibold'
-      },
-      color: {
-        default: 'bg-primary-100 disabled:bg-background-400 text-primary-500',
-        primary: 'bg-background-300 disabled:opacity-50 text-primary-500',
-        danger: 'bg-red-50 disabled:opacity-50 text-red-100'
-      },
-      size: {
-        xs: 'py-6 px-16 h-19 text-xs',
-        md: 'py-10 px-20 h-21 text-xs',
-        lg: 'py-10 px-18 h-22 text-base'
-      }
+export const Button = extendVariants(ButtonNextUI, {
+  variants: {
+    variant: {
+      solid: 'border-transparent font-semibold',
+      outline: 'border-1 border-primary-100 font-semibold'
     },
-    defaultVariants: {
-      variant: 'solid',
-      color: 'default',
-      size: 'md'
+
+    color: {
+      default: 'bg-transparent text-primary-100',
+      primary: 'bg-primary-100 uppercase text-white',
+      secondary: 'bg-white uppercase text-grey-300'
+    },
+
+    isIconOnly: {
+      true: 'bg-none',
+      ariaLabel: 'button icon'
+    },
+
+    size: {
+      xs: 'px-3 text-sm max-h-10 h-10 gap-1 text-sm rounded-lg',
+      md: 'px-4 min-w-20 max-h-10 h-10 text-small gap-2 rounded-small',
+      lg: 'w-full max-h-12 h-12 text-small gap-2 rounded-small'
     }
-  })
-);
+  },
+  defaultVariants: {
+    variant: 'solid',
+    color: 'primary'
+  }
+});
