@@ -40,10 +40,10 @@ export const Primary: Story = {
   }
 };
 
-export const Danger: Story = {
+export const Secondary: Story = {
   args: {
     children: 'Secondary',
-    color: 'default'
+    color: 'secondary'
   }
 };
 
@@ -51,6 +51,13 @@ export const Outline: Story = {
   args: {
     children: 'Outline',
     variant: 'outline',
+    color: 'default'
+  }
+};
+
+export const Link: Story = {
+  args: {
+    children: 'Link',
     color: 'default'
   }
 };

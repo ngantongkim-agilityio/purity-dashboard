@@ -15,17 +15,17 @@ export const baseColors = {
 
 export const colors = {
   background: {
-    '100': baseColors.white,
-    '200': baseColors.grey[100]
+    DEFAULT: baseColors.white,
+    foreground: baseColors.grey[100]
   },
   primary: {
-    '100': baseColors.green[100],
-    '200': baseColors.white
+    DEFAULT: baseColors.green[100],
+    100: baseColors.white
   },
   secondary: {
-    '100': baseColors.grey[100],
-    '200': baseColors.grey[200],
-    '300': baseColors.grey[300]
+    100: baseColors.grey[100],
+    200: baseColors.grey[200],
+    300: baseColors.grey[300]
   },
   success: baseColors.green[200],
   warning: baseColors.yellow,

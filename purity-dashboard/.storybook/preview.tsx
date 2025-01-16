@@ -1,18 +1,26 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
+import { Inter } from 'next/font/google'
 
 // Providers
 import { Providers } from '../src/app/provider';
 
-// CSS
+// CSS global
 import '../src/styles/globals.css';
+
+export const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <Providers>
-        <Story />
-      </Providers>
+      <div className={`${inter.className}`}>
+        <Providers>
+          <Story />
+        </Providers>
+      </div>
     ),
   ],
   parameters: {
@@ -22,6 +30,14 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      default: 'light',
+      values: [
+        { name: 'light', value: '#f8f9fa' },
+        { name: 'dark', value: '#2d3748' },
+      ],
+    },
+
   },
 };
 

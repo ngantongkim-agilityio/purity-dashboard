@@ -19,8 +19,8 @@ module.exports = {
         ...colors,
       },
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-lusitana)'],
       },
     },
   },
