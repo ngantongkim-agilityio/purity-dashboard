@@ -3,6 +3,7 @@ import {nextui} from '@nextui-org/react'
 import {
   colors,
   baseColors,
+  fontSize,
 } from './src/themes';
 
 
@@ -18,9 +19,10 @@ module.exports = {
         ...baseColors,
         ...colors,
       },
+      fontSize,
       fontFamily: {
         sans: ['var(--font-inter)'],
-        mono: ['var(--font-lusitana)'],
+        mono: ['var(--font-montserrat)'],
       },
     },
   },

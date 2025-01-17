@@ -2,7 +2,7 @@
 
 import { memo, useActionState } from 'react';
 import Link from 'next/link';
-import { Link as NextUILink } from '@nextui-org/react';
+import { Link as NextUILink, Switch } from '@nextui-org/react';
 
 // Components
 import { Button, Input } from '@/components/common';
@@ -16,26 +16,30 @@ const LoginForm = memo(() => {
   return (
     <div>
       <div>
-        <h1 className='text-primary'>Welcome Back</h1>
-        <p className='text-secondary-200'>
+        <h1 className='text-primary font-bold text-3xl'>Welcome Back</h1>
+        <p className='text-secondary-200 font-bold text-sm mt-2'>
           Enter your email and password to sign in
         </p>
       </div>
-      <form
-        className='flex flex-col md:px-10 px-4 pt-4 w-full'
-        onSubmit={formAction}
-      >
-        <Input
-          name='email'
-          placeholder='Your email address'
-          isInvalid={false}
-        />
-        <Input
-          name='password'
-          placeholder='Your email address'
-          isInvalid={false}
-        />
-        <div className='h-[78px] flex flex-col justify-end'>
+      <form className='flex flex-col w-full mt-9 gap-y-9' onSubmit={formAction}>
+        <div>
+          <Input
+            name='email'
+            label='Email'
+            labelPlacement='outside'
+            placeholder='Your email address'
+            isInvalid={false}
+          />
+          <Input
+            name='password'
+            label='Password'
+            labelPlacement='outside'
+            placeholder='Your email address'
+            isInvalid={false}
+          />
+          <Switch>Remember me</Switch>
+        </div>
+        <div className='flex flex-col gap-y-5'>
           <Button
             type='submit'
             size='lg'
@@ -44,16 +48,18 @@ const LoginForm = memo(() => {
           >
             Sign in
           </Button>
-        </div>
-        <div className='flex justify-center w-full gap-6 pt-10 pb-3'>
-          <p className='text-secondary-200'>Don&rsquo;t have an account?</p>
-          <NextUILink
-            as={Link}
-            className='font-semibold text-primary'
-            href={'#'}
-          >
-            Sign up
-          </NextUILink>
+          <div className='flex justify-center w-full gap-1'>
+            <p className='text-secondary-200 text-sm'>
+              Don&rsquo;t have an account?
+            </p>
+            <NextUILink
+              as={Link}
+              className='font-semibold text-primary text-sm'
+              href={'#'}
+            >
+              Sign up
+            </NextUILink>
+          </div>
         </div>
       </form>
     </div>

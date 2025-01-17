@@ -1,23 +1,34 @@
-import '@/styles/globals.css';
+import { Metadata } from 'next';
 import { Providers } from './provider';
-import { Inter, Lusitana } from 'next/font/google';
+import { Inter, Montserrat } from 'next/font/google';
+import '@/styles/globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
+  weight: ['400', '700'],
   variable: '--font-inter'
 });
 
-const lusitana = Lusitana({
+const montserrat = Montserrat({
   weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-lusitana'
+  variable: '--font-roboto'
 });
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Purity Dashboard',
+    default: 'Purity Dashboard'
+  },
+  description: 'The practice for NextJS',
+  metadataBase: new URL('https://nextjs-dashboard-examples.vercel.app/')
+};
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${lusitana.variable} ${inter.className}`}
+        className={`${inter.variable} ${montserrat.variable} ${inter.className}`}
       >
         <Providers>{children}</Providers>
       </body>

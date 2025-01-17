@@ -18,7 +18,7 @@ export const Input = memo(
         },
         bordered: {
           inputWrapper: cn(
-            'bg-primary-100 border-secondary-200 data-[hover=true]:!bg-primary-100 group-data-[focus=true]:!bg-primary-100 data-[focus=true]:border-secondary-300 group-data-[invalid=true]:border-danger'
+            'bg-primary-100 border-secondary-50 data-[hover=true]:!bg-primary-100 group-data-[focus=true]:!bg-primary-100 data-[focus=true]:!border-secondary-200 group-data-[invalid=true]:border-danger'
           ),
           input:
             'text-secondary-300 placeholder:text-secondary-200 bg-primary-100 text-sm mx-2 group-data-[invalid=true]:!text-danger rounded',

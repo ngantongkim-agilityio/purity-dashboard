@@ -1,10 +1,16 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  logging: {
-    fetches: {
-      fullUrl: true,
-    },
+  experimental: {
+    ppr: 'incremental'
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

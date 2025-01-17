@@ -6,6 +6,7 @@ export const baseColors = {
   },
   red: '#e53e3e',
   grey: {
+    50: '#e2e8f0',
     100: '#f8f9fa',
     200: '#a0aec0',
     300: '#2d3748'
@@ -23,6 +24,7 @@ export const colors = {
     100: baseColors.white
   },
   secondary: {
+    50: baseColors.grey[50],
     100: baseColors.grey[100],
     200: baseColors.grey[200],
     300: baseColors.grey[300]
