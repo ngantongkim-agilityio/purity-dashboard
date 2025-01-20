@@ -17,28 +17,28 @@ export const metadata: Metadata = {
 const LoginPage = () => {
   return (
     <div className='bg-primary-100 fixed left-0 w-full h-full'>
-      <div className='container flex'>
-        <div className='w-[585px] pt-20 md:pt-[194px]'>
-          <div className='relative mx-auto flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32'>
+      <div className='w-full flex justify-between h-full'>
+        <div className='w-1/2 h-full justify-items-end pr-44'>
+          <div className='flex min-w-[353px] h-full justify-center flex-col'>
+            <h1 className='text-primary font-bold text-3xl'>Welcome Back</h1>
+            <p className='text-secondary-200 font-bold text-sm mt-2'>
+              Enter your email and password to sign in
+            </p>
             <LoginForm />
           </div>
         </div>
-
-        <div
-          className={cn(
-            'relative 2xl:block overflow-hidden hidden ',
-            'min-w-[800px] h-full fixed right-0'
-          )}
-        >
-          <Image
-            alt=''
-            src={AUTH_BACKGROUND}
-            blurDataURL={generateImageToBase64(100, 100)}
-            className={cn(
-              'hidden 2xl:block',
-              'min-w-[800px] h-full fixed right-0'
-            )}
-          />
+        <div className='w-1/2 pl-16 pb-28'>
+          <div className='relative h-full'>
+            <Image
+              alt='login background'
+              src={AUTH_BACKGROUND.login}
+              blurDataURL={generateImageToBase64(100, 100)}
+              className={cn(
+                'hidden 2xl:block object-cover rounded-bl-3xl',
+                'h-full fixed right-0'
+              )}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -49,7 +49,6 @@ export const Image = memo(
         blurDataURL={blurDataURL}
         onLoad={handleLoad}
         onError={handleError}
-        style={{ objectFit: 'cover' }}
         className={cn(
           'transition-opacity object-cover duration-200 ease-in-out',
           isLoaded ? 'opacity-100' : 'opacity-80',

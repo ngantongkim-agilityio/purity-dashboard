@@ -14,7 +14,7 @@ export const authConfig = {
       } else if (isLoggedIn) {
         return Response.redirect(new URL('/dashboard', nextUrl));
       }
-      return false;
+      return true;
     }
   },
   providers: [] // Add providers with an empty array for now

@@ -2,10 +2,10 @@ import { memo, type ReactNode } from 'react';
 import { cn } from '@/utils/styles';
 
 const COLORS = {
-  primary: 'text-primary-100 font-medium',
+  primary: 'text-primary-100 font-normal',
   secondary: 'text-secondary-100',
-  title: ' text-primary-100 font-semibold',
-  subTitle: 'text-primary-300 font-normal',
+  title: ' text-primary-100 font-bold',
+  subTitle: 'text-primary-200 font-normal',
   description: 'text-primary-200 font-medium',
   success: 'text-success',
   warning: 'text-warning',
@@ -21,8 +21,7 @@ const SIZES = {
   lg: 'text-lg',
   xl: 'text-xl',
   '2xl': 'text-2xl',
-  '3xl': 'text-3xl',
-  '4xl': 'text-4xl'
+  '3xl': 'text-3xl'
 };
 
 interface TextProps {
