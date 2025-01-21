@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 // Constants
-import { AUTH_BACKGROUND } from '@/constants';
+import { BACKGROUND } from '@/constants';
 
 // Components
-import { Image, Text } from '@/components/common';
-import SignupForm from '@/components/SignupForm';
+import { Image, Text } from '@/components';
+import { SignupForm } from '@/sections/SignupForm';
 
 // Utils
 import { generateImageToBase64 } from '@/utils';
@@ -20,7 +20,7 @@ const SignUpPage = () => {
       <div className='relative w-full h-1/2'>
         <Image
           alt='signup background'
-          src={AUTH_BACKGROUND.signup}
+          src={BACKGROUND.signup}
           blurDataURL={generateImageToBase64(100, 100)}
           className='rounded-3xl'
         />

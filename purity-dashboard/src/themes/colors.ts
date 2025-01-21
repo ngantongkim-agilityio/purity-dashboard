@@ -9,15 +9,16 @@ export const baseColors = {
     50: '#e2e8f0',
     100: '#f8f9fa',
     200: '#a0aec0',
-    300: '#2d3748'
+    300: '#2d3748',
+    400: '#e0e1e2'
   },
   yellow: '#f5a524'
 };
 
 export const colors = {
   background: {
-    DEFAULT: baseColors.white,
-    foreground: baseColors.grey[100]
+    DEFAULT: baseColors.grey[100],
+    foreground: baseColors.white
   },
   primary: {
     DEFAULT: baseColors.green[100],

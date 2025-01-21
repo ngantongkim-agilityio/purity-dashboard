@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { Providers } from './provider';
-import { Inter, Montserrat } from 'next/font/google';
-import '@/styles/globals.css';
+import { Inter, Lora } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -9,10 +9,10 @@ const inter = Inter({
   variable: '--font-inter'
 });
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
+const lora = Lora({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-roboto'
+  variable: '--font-lora'
 });
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${montserrat.variable} ${inter.className}`}
+        className={`${inter.variable} ${lora.variable} ${inter.className} bg`}
       >
         <Providers>{children}</Providers>
       </body>

@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 // Constants
-import { AUTH_BACKGROUND } from '@/constants';
+import { BACKGROUND } from '@/constants';
 
 // Components
-import { Image } from '@/components/common';
-import LoginForm from '@/components/LoginForm';
+import { Image } from '@/components';
+import { LoginForm } from '@/sections';
 
 // Utils
 import { cn, generateImageToBase64 } from '@/utils';
@@ -31,7 +31,7 @@ const LoginPage = () => {
           <div className='relative h-full'>
             <Image
               alt='login background'
-              src={AUTH_BACKGROUND.login}
+              src={BACKGROUND.login}
               blurDataURL={generateImageToBase64(100, 100)}
               className={cn(
                 'hidden 2xl:block object-cover rounded-bl-3xl',
