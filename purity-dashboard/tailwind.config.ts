@@ -22,7 +22,7 @@ module.exports = {
       fontSize,
       fontFamily: {
         sans: ['var(--font-inter)'],
-        mono: ['var(--font-montserrat)'],
+        lora: ['var(--font-lora)'],
       },
     },
   },

@@ -4,8 +4,8 @@ import { useTheme } from 'next-themes';
 import { useCallback, useEffect, useState } from 'react';
 
 // Components
-import { Button } from '@/components/common/Button';
-import { SunIcon, MoonIcon } from '@/components/common/Icons';
+import { Button } from '@/components';
+import { SunIcon, MoonIcon } from '@/icons';
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);

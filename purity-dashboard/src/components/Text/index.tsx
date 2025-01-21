@@ -4,6 +4,7 @@ import { cn } from '@/utils/styles';
 const COLORS = {
   primary: 'text-primary-100 font-normal',
   secondary: 'text-secondary-100',
+  tertiary: 'text-secondary-300',
   title: ' text-primary-100 font-bold',
   subTitle: 'text-primary-200 font-normal',
   description: 'text-primary-200 font-medium',
@@ -29,6 +30,7 @@ interface TextProps {
   color?:
     | 'primary'
     | 'secondary'
+    | 'tertiary'
     | 'title'
     | 'subTitle'
     | 'description'
