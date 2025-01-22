@@ -43,7 +43,7 @@ export const NavLinks = ({ links = DASHBOARD_NAV_LINKS }: NavLinksProps) => {
                     'p-2 bg-primary-100 text-primary rounded-xl',
                     { 'shadow-secondary-50 shadow-md': pathname !== href },
                     {
-                      'bg-primary text-white': pathname === href
+                      'bg-primary text-primary-100': pathname === href
                     }
                   )}
                 >

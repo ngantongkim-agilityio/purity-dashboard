@@ -6,3 +6,8 @@ export * from './HelpIcon';
 export * from './ChartIcon';
 export * from './CardIcon';
 export * from './BuildIcon';
+export * from './WalletIcon';
+export * from './GlobeIcon';
+export * from './DocumentIcon';
+export * from './CartIcon';
+export * from './ArrowIcon';

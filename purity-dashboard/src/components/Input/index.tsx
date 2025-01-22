@@ -1,7 +1,7 @@
 'use client';
 
 import { memo } from 'react';
-import { extendVariants, Input as NextUIInput } from '@nextui-org/react';
+import { extendVariants, Input as NextUIInput } from '@heroui/react';
 import { cn } from '@/utils/styles';
 
 export const Input = memo(

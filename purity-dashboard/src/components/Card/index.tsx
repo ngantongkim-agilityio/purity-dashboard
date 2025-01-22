@@ -1,37 +1,29 @@
-import {
-  BanknotesIcon,
-  ClockIcon,
-  UserGroupIcon,
-  InboxIcon
-} from '@heroicons/react/24/outline';
-
-const iconMap = {
-  collected: BanknotesIcon,
-  customers: UserGroupIcon,
-  pending: ClockIcon,
-  invoices: InboxIcon
-};
+import { JSX } from 'react';
+import { Text } from '../Text';
+import { CustomClassType } from '@/types';
 
 export const Card = ({
   title,
   value,
-  type
+  icon
 }: {
   title: string;
   value: number | string;
-  type: 'invoices' | 'customers' | 'pending' | 'collected';
+  icon: ({ customClass }: CustomClassType) => JSX.Element;
 }) => {
-  const Icon = iconMap[type];
+  const CardIcon = icon;
 
   return (
-    <div className='rounded-xl bg-gray-50 p-2 shadow-sm'>
-      <div className='flex p-4'>
-        {Icon ? <Icon className='h-5 w-5 text-gray-700' /> : null}
-        <h3 className='ml-2 text-sm font-medium'>{title}</h3>
+    <div className='flex justify-between rounded-xl bg-primary-100 p-4 shadow-secondary-50 shadow-md'>
+      <div>
+        <Text variant='h3' className='text-xs font-bold text-grey-200'>
+          {title}
+        </Text>
+        <Text className='text-lg font-bold text-grey-300'>{value}</Text>
       </div>
-      <p className='truncate rounded-xl bg-white px-4 py-8 text-center text-2xl'>
-        {value}
-      </p>
+      <div className='p-2.5 rounded-lg bg-primary'>
+        <CardIcon />
+      </div>
     </div>
   );
 };

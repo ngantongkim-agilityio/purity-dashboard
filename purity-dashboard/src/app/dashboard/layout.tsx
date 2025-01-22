@@ -9,15 +9,13 @@ const DashboardLayout = async ({
   children: React.ReactNode;
 }>) => {
   return (
-    <main>
-      <section className='flex h-screen flex-col md:flex-row md:overflow-hidden'>
-        <Sidebar />
-        <section className='flex-grow p-6 md:overflow-y-auto md:p-12'>
-          <section className=''>{children}</section>
-          <Footer />
-        </section>
-      </section>
-    </main>
+    <div className='flex h-screen flex-col md:flex-row md:overflow-hidden'>
+      <Sidebar />
+      <div className='flex-grow min-h-screen flex flex-col justify-between p-6 md:overflow-y-auto md:px-8'>
+        {children}
+        <Footer />
+      </div>
+    </div>
   );
 };
 

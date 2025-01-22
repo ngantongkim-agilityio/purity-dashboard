@@ -1,8 +1,6 @@
 import { CustomClassType } from '@/types';
 
-export const BuildIcon = ({
-  customClass = 'w-4 h-4 text-primary'
-}: CustomClassType) => (
+export const BuildIcon = ({ customClass = 'w-4 h-4' }: CustomClassType) => (
   <svg fill='none' className={customClass}>
     <g clipPath='url(#a)'>
       <path

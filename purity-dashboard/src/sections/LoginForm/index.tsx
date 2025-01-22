@@ -2,7 +2,7 @@
 
 import { memo, useActionState } from 'react';
 import Link from 'next/link';
-import { Link as NextUILink, Switch } from '@nextui-org/react';
+import { Link as NextUILink, Switch } from '@heroui/react';
 
 // Components
 import { Button, Input } from '@/components';

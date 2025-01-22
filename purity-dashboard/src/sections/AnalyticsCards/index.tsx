@@ -1,5 +1,6 @@
 import { Card } from '@/components';
 import { fetchCardData } from '@/actions/revenue';
+import { WalletIcon, GlobeIcon, DocumentIcon, CartIcon } from '@/icons';
 
 export const AnalyticsCards = async () => {
   const {
@@ -10,14 +11,14 @@ export const AnalyticsCards = async () => {
   } = await fetchCardData();
   return (
     <>
-      <Card title='Collected' value={totalPaidInvoices} type='collected' />
-      <Card title='Pending' value={totalPendingInvoices} type='pending' />
-      <Card title='Total Invoices' value={numberOfInvoices} type='invoices' />
+      <Card title='Total Money' value={totalPaidInvoices} icon={WalletIcon} />
+      <Card title='Total Users' value={numberOfCustomers} icon={GlobeIcon} />
       <Card
-        title='Total Customers'
-        value={numberOfCustomers}
-        type='customers'
+        title='Total Projects'
+        value={numberOfInvoices}
+        icon={DocumentIcon}
       />
+      <Card title='Total Sales' value={totalPendingInvoices} icon={CartIcon} />
     </>
   );
 };

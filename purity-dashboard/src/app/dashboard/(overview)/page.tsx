@@ -3,30 +3,32 @@ import { Suspense } from 'react';
 import {
   AnalyticsCards,
   CardsSkeleton,
-  LatestInvoices,
+  LatestProjects,
+  ReadMore,
   RevenueChartSkeleton
 } from '@/sections';
 import { LatestInvoicesSkeleton } from '@/sections/LatestInvoicesSkeleton';
-import RevenueChart from '@/sections/RevenueChart';
+import { SaleChart } from '@/sections';
 
 const Dashboard = () => {
   return (
-    <section>
+    <main className='space-y-6'>
       <h1 className={`mb-4 text-xl md:text-2xl`}>Dashboard</h1>
-      <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+      <section className='grid gap-6 sm:grid-cols-2 lg:grid-cols-4'>
         <Suspense fallback={<CardsSkeleton />}>
           <AnalyticsCards />
         </Suspense>
-      </div>
-      <div className='mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8'>
+      </section>
+      <ReadMore />
+      <section className='mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8'>
         <Suspense fallback={<RevenueChartSkeleton />}>
-          <RevenueChart />
+          <SaleChart />
         </Suspense>
         <Suspense fallback={<LatestInvoicesSkeleton />}>
-          <LatestInvoices />
+          <LatestProjects />
         </Suspense>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 

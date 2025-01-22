@@ -1,6 +1,6 @@
 'use client';
 
-import { extendVariants, Divider as DividerNextUI } from '@nextui-org/react';
+import { extendVariants, Divider as DividerNextUI } from '@heroui/react';
 
 export const Divider = extendVariants(DividerNextUI, {
   variants: {

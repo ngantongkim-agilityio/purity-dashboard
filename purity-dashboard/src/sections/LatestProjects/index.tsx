@@ -1,15 +1,19 @@
 import { fetchLatestInvoices } from '@/actions/project';
+import { Text } from '@/components';
 import { cn } from '@/utils';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
+import { log } from 'console';
 import Image from 'next/image';
 
-export const LatestInvoices = async () => {
+export const LatestProjects = async () => {
   const latestInvoices = await fetchLatestInvoices();
 
   return (
-    <div className='flex w-full flex-col md:col-span-4'>
-      <h2 className={`mb-4 text-xl md:text-2xl`}>Latest Invoices</h2>
-      <div className='flex grow flex-col justify-between rounded-xl bg-gray-50 p-4'>
+    <div className='flex w-full flex-col md:col-span-4 bg-primary-100 rounded-xl shadow-secondary-50 shadow-md p-4 space-y-2'>
+      <Text variant='h3' size='lg' color='subTitle'>
+        Latest Projects
+      </Text>
+      <div className='flex grow flex-col justify-between'>
         <div className='bg-white px-6'>
           {latestInvoices.map((invoice, i) => {
             return (
