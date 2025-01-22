@@ -24,7 +24,7 @@
 - [Next.js latest version (15.1.4)](https://nextjs.org/)
 - [React latest version (19.0.0)](https://react.dev/)
 - [Zod 3.23.8](https://zod.dev/)
-- [NextUI](https://nextui.org/)
+- [HeroUI](https://www.heroui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## Developer tools
@@ -52,7 +52,8 @@ Build a Purity dashboard to manage authors:
 - User can login with created account
 - User can see main dashboard page
 - User can see a list of authors
-  - User can add/search/edit/delete a author
+- User can see a list of projects
+  - User can add/search/edit/delete a project
 
 ## Development environment
 
