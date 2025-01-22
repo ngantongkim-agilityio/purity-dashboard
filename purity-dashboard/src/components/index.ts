@@ -7,3 +7,6 @@ export * from './NavLinks';
 export * from './Divider';
 export * from './Card';
 export * from './CardSkeleton';
+export * from './SearchInput';
+export * from './Pagination';
+export * from './Status';
