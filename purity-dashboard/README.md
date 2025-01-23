@@ -52,8 +52,8 @@ Build a Purity dashboard to manage authors:
 - User can login with created account
 - User can see main dashboard page
 - User can see a list of authors
-- User can see a list of projects
-  - User can add/search/edit/delete a project
+- User can see a list of products
+  - User can add/search/edit/delete a product
 
 ## Development environment
 
