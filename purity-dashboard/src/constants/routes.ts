@@ -6,6 +6,10 @@ export const ROUTES = {
   SIGNUP: '/signup',
   DASHBOARD: '/dashboard',
   AUTHORS: '/dashboard/authors',
-  PROJECTS: '/dashboard/projects',
-  RTL: '/dashboard/rtl'
+  PRODUCTS: '/dashboard/products',
+  RTL: '/dashboard/rtl',
+  BLOG: '/blog',
+  CREATE_TIM: '/create-tim',
+  SIMPLE: '/simple',
+  LICENSE: '/license'
 };

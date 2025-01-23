@@ -10,3 +10,4 @@ export * from './CardSkeleton';
 export * from './SearchInput';
 export * from './Pagination';
 export * from './Status';
+export * from './Breadcrumbs';

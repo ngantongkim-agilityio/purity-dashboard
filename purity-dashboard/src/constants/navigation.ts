@@ -8,25 +8,25 @@ export const DASHBOARD_NAV_LINKS = [
     href: ROUTES.AUTHORS,
     icon: ChartIcon
   },
-  { name: 'Projects', href: ROUTES.PROJECTS, icon: CardIcon },
+  { name: 'Products', href: ROUTES.PRODUCTS, icon: CardIcon },
   { name: 'RTL', href: ROUTES.RTL, icon: BuildIcon }
 ];
 
 export const FOOTER_NAVIGATION = [
   {
-    url: '',
+    url: ROUTES.CREATE_TIM,
     title: 'Creative Tim'
   },
   {
-    url: '',
+    url: ROUTES.SIMPLE,
     title: 'Simple'
   },
   {
-    url: '',
+    url: ROUTES.BLOG,
     title: 'Blog'
   },
   {
-    url: '',
+    url: ROUTES.LICENSE,
     title: 'License'
   }
 ];

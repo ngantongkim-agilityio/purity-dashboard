@@ -1,5 +1,9 @@
 const RTL = () => {
-  return <section className='flex min-h-screen flex-col p-6'>RTL</section>;
+  return (
+    <main>
+      <div className='flex min-h-screen flex-col p-6'>RTL Page</div>
+    </main>
+  );
 };
 
 export default RTL;
