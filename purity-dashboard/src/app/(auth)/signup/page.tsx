@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const SignUpPage = () => {
   return (
-    <div className='bg-primary-100 fixed w-full h-full p-6'>
+    <main className='bg-primary-100 relative w-full h-full p-6'>
       <div className='relative w-full h-1/2'>
         <Image
           alt='signup background'
@@ -39,7 +39,7 @@ const SignUpPage = () => {
           <SignupForm />
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

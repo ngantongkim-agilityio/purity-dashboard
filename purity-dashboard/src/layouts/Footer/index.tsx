@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import { FOOTER_NAVIGATION, ROUTES } from '@/constants';
 import { Text } from '@/components';
+import { cn } from '@/utils';
 
-export const Footer = () => (
-  <footer className='w-full grid grid-cols-1 gap-6 md:grid-cols-2 bg-transparent py-6'>
+export const Footer = ({ className = '' }: { className?: string }) => (
+  <footer
+    className={cn(
+      'w-full grid grid-cols-1 gap-6 md:grid-cols-2 bg-transparent py-6',
+      className
+    )}
+  >
     <Text size='xs' className='text-secondary-200'>
       {`\u0040 2025, Made with ❤️ by `}
       <Link href={ROUTES.CREATE_TIM} className='text-primary font-bold'>

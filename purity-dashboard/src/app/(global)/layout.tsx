@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Footer } from '@/layouts';
 import { Text } from '@/components';
 import LogoIcon from '@/icons/LogoIcon';
+import { ROUTES } from '@/constants';
 
 const GlobalLayout = async ({
   children
@@ -9,8 +10,8 @@ const GlobalLayout = async ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className='flex h-screen flex-col md:flex-row md:overflow-hidden'>
-      <Link className='flex justify-start space-x-3 px-4 py-2' href='/'>
+    <div className='flex flex-col justify-between items-center h-screen px-8'>
+      <Link className='flex space-x-3 px-4 py-8' href={ROUTES.HOME}>
         <LogoIcon />
         <Text
           variant='h1'
@@ -20,10 +21,8 @@ const GlobalLayout = async ({
           Purity UI Dashboard
         </Text>
       </Link>
-      <div className='flex-grow min-h-screen flex flex-col justify-between p-6 md:overflow-y-auto md:px-8'>
-        {children}
-        <Footer />
-      </div>
+      {children}
+      <Footer />
     </div>
   );
 };

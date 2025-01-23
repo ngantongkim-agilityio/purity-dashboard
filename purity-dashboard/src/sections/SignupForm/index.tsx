@@ -9,16 +9,18 @@ import { Button, Input } from '@/components';
 
 // Constants
 import { ROUTES } from '@/constants';
+import { State, signup } from '@/actions/auth';
 
 export const SignupForm = memo(() => {
+  const initialState: State = { message: null, errors: {} };
   const [errorMessage, formAction, isPending] = useActionState(
-    () => {},
-    undefined
+    signup,
+    initialState
   );
 
   return (
     <div className='bg-primary-100 min-w-[440px] p-12 rounded-3xl shadow-2xl'>
-      <form className='flex flex-col w-full gap-y-6' onSubmit={formAction}>
+      <form className='flex flex-col w-full gap-y-6' action={formAction}>
         <div>
           <Input
             name='name'

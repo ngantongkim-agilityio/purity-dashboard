@@ -27,14 +27,12 @@ export const LoginForm = memo(() => {
           label='Email'
           labelPlacement='outside'
           placeholder='Your email address'
-          isInvalid={false}
         />
         <Input
           name='password'
           label='Password'
           labelPlacement='outside'
           placeholder='Your email address'
-          isInvalid={false}
         />
         <Switch>Remember me</Switch>
       </div>

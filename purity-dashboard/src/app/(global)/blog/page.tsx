@@ -1,7 +1,12 @@
+import { Text } from '@/components';
+
 const BlogPage = () => {
   return (
-    <main>
-      <div className='flex min-h-screen flex-col p-6'>Blog Page</div>
+    <main className='text-center'>
+      <Text variant='h1' color='subTitle' size='lg'>
+        Blog Page
+      </Text>
+      <Text color='tertiary'>Coming soon</Text>
     </main>
   );
 };

@@ -1,7 +1,12 @@
+import { Text } from '@/components';
+
 const CreateTimPage = () => {
   return (
-    <main>
-      <div className='flex min-h-screen flex-col p-6'>Create Tim Page</div>
+    <main className='text-center'>
+      <Text variant='h1' color='subTitle' size='lg'>
+        Creative Tim Page
+      </Text>
+      <Text color='tertiary'>Coming soon</Text>
     </main>
   );
 };

@@ -1,7 +1,12 @@
+import { Text } from '@/components';
+
 const SimplePage = () => {
   return (
-    <main>
-      <div className='flex min-h-screen flex-col p-6'>Simple Page</div>
+    <main className='text-center'>
+      <Text variant='h1' color='subTitle' size='lg'>
+        Simple Page
+      </Text>
+      <Text color='tertiary'>Coming soon</Text>
     </main>
   );
 };
