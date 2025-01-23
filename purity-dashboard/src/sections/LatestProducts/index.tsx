@@ -1,24 +1,24 @@
-import { fetchLatestInvoices } from '@/actions/project';
+import { fetchLatestProducts } from '@/actions/product';
 import { Text } from '@/components';
 import { cn } from '@/utils';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { log } from 'console';
 import Image from 'next/image';
 
-export const LatestProjects = async () => {
-  const latestInvoices = await fetchLatestInvoices();
+export const LatestProducts = async () => {
+  const latestProducts = await fetchLatestProducts();
 
   return (
     <div className='flex w-full flex-col md:col-span-4 bg-primary-100 rounded-xl shadow-secondary-50 shadow-md p-4 space-y-2'>
       <Text variant='h3' size='lg' color='subTitle'>
-        Latest Projects
+        Latest Products
       </Text>
       <div className='flex grow flex-col justify-between'>
         <div className='bg-white px-6'>
-          {latestInvoices.map((invoice, i) => {
+          {latestProducts.map((product, i) => {
             return (
               <div
-                key={invoice.id}
+                key={product.id}
                 className={cn(
                   'flex flex-row items-center justify-between py-4',
                   {
@@ -28,23 +28,23 @@ export const LatestProjects = async () => {
               >
                 <div className='flex items-center'>
                   <Image
-                    src={invoice.image_url}
-                    alt={`${invoice.name}'s profile picture`}
+                    src={product.image_url}
+                    alt={`${product.name}'s profile picture`}
                     className='mr-4 rounded-full'
                     width={32}
                     height={32}
                   />
                   <div className='min-w-0'>
                     <p className='truncate text-sm font-semibold md:text-base'>
-                      {invoice.name}
+                      {product.name}
                     </p>
                     <p className='hidden text-sm text-gray-500 sm:block'>
-                      {invoice.email}
+                      {product.email}
                     </p>
                   </div>
                 </div>
                 <p className={`truncate text-sm font-medium md:text-base`}>
-                  {invoice.amount}
+                  {product.amount}
                 </p>
               </div>
             );

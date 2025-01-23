@@ -1,6 +1,6 @@
-import { InvoiceSkeleton } from '../InvoiceSkeleton';
+import { ProductSkeleton } from '../ProductSkeleton';
 
-export const LatestInvoicesSkeleton = () => {
+export const LatestProductsSkeleton = () => {
   return (
     <div
       className={`before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent relative flex w-full flex-col overflow-hidden md:col-span-4`}
@@ -8,11 +8,11 @@ export const LatestInvoicesSkeleton = () => {
       <div className='mb-4 h-8 w-36 rounded-md bg-gray-100' />
       <div className='flex grow flex-col justify-between rounded-xl bg-gray-100 p-4'>
         <div className='bg-white px-6'>
-          <InvoiceSkeleton />
-          <InvoiceSkeleton />
-          <InvoiceSkeleton />
-          <InvoiceSkeleton />
-          <InvoiceSkeleton />
+          <ProductSkeleton />
+          <ProductSkeleton />
+          <ProductSkeleton />
+          <ProductSkeleton />
+          <ProductSkeleton />
         </div>
         <div className='flex items-center pb-2 pt-6'>
           <div className='h-5 w-5 rounded-full bg-gray-200' />

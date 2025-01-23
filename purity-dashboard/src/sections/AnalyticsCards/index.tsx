@@ -4,21 +4,21 @@ import { WalletIcon, GlobeIcon, DocumentIcon, CartIcon } from '@/icons';
 
 export const AnalyticsCards = async () => {
   const {
-    numberOfInvoices,
-    numberOfCustomers,
-    totalPaidInvoices,
-    totalPendingInvoices
+    numberOfProducts,
+    numberOfAuthors,
+    totalPaidProducts,
+    totalPendingProducts
   } = await fetchCardData();
   return (
     <>
-      <Card title='Total Money' value={totalPaidInvoices} icon={WalletIcon} />
-      <Card title='Total Users' value={numberOfCustomers} icon={GlobeIcon} />
+      <Card title='Total Money' value={totalPaidProducts} icon={WalletIcon} />
+      <Card title='Total Users' value={numberOfAuthors} icon={GlobeIcon} />
       <Card
-        title='Total Projects'
-        value={numberOfInvoices}
+        title='Total Products'
+        value={numberOfProducts}
         icon={DocumentIcon}
       />
-      <Card title='Total Sales' value={totalPendingInvoices} icon={CartIcon} />
+      <Card title='Total Sales' value={totalPendingProducts} icon={CartIcon} />
     </>
   );
 };

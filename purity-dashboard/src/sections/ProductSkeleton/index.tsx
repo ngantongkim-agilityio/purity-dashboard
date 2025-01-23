@@ -1,4 +1,4 @@
-export const InvoiceSkeleton = () => {
+export const ProductSkeleton = () => {
   return (
     <div className='flex flex-row items-center justify-between border-b border-gray-100 py-4'>
       <div className='flex items-center'>
