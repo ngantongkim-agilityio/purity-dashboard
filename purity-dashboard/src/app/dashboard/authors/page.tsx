@@ -1,11 +1,11 @@
-import { fetchFilteredCustomers } from '@/actions/author';
+import { fetchFilteredAuthors } from '@/actions/author';
 import { AuthorsTable } from '@/sections';
-import { LatestInvoicesSkeleton } from '@/sections/LatestInvoicesSkeleton';
+import { LatestProductsSkeleton } from '@/sections/LatestProductsSkeleton';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
-  title: 'Customers'
+  title: 'Authors'
 };
 
 const AuthorsPage = async (props: {
@@ -17,12 +17,12 @@ const AuthorsPage = async (props: {
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
 
-  const customers = await fetchFilteredCustomers(query);
+  const authors = await fetchFilteredAuthors(query);
 
   return (
     <main>
-      <Suspense fallback={<LatestInvoicesSkeleton />}>
-        <AuthorsTable customers={customers} />
+      <Suspense fallback={<LatestProductsSkeleton />}>
+        <AuthorsTable authors={authors} />
       </Suspense>
     </main>
   );

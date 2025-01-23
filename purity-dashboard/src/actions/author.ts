@@ -1,54 +1,54 @@
-import { CustomerField, CustomersTableType } from '@/types';
+import { AuthorField, AuthorsTableType } from '@/types';
 import { formatCurrency } from '@/utils';
 import { sql } from '@vercel/postgres';
 
-export const fetchCustomers = async () => {
+export const fetchAuthors = async () => {
   try {
-    const data = await sql<CustomerField>`
+    const data = await sql<AuthorField>`
       SELECT
         id,
         name
-      FROM customers
+      FROM authors
       ORDER BY name ASC
     `;
 
-    const customers = data.rows;
-    return customers;
+    const authors = data.rows;
+    return authors;
   } catch (err) {
     console.error('Database Error:', err);
-    throw new Error('Failed to fetch all customers.');
+    throw new Error('Failed to fetch all authors.');
   }
 };
 
-export const fetchFilteredCustomers = async (query: string) => {
+export const fetchFilteredAuthors = async (query: string) => {
   try {
-    const data = await sql<CustomersTableType>`
+    const data = await sql<AuthorsTableType>`
 		SELECT
-		  customers.id,
-		  customers.name,
-		  customers.email,
-		  customers.image_url,
-		  COUNT(invoices.id) AS total_invoices,
-		  SUM(CASE WHEN invoices.status = 'pending' THEN invoices.amount ELSE 0 END) AS total_pending,
-		  SUM(CASE WHEN invoices.status = 'paid' THEN invoices.amount ELSE 0 END) AS total_paid
-		FROM customers
-		LEFT JOIN invoices ON customers.id = invoices.customer_id
+		  authors.id,
+		  authors.name,
+		  authors.email,
+		  authors.image_url,
+		  COUNT(products.id) AS total_products,
+		  SUM(CASE WHEN products.status = 'pending' THEN products.amount ELSE 0 END) AS total_pending,
+		  SUM(CASE WHEN products.status = 'paid' THEN products.amount ELSE 0 END) AS total_paid
+		FROM authors
+		LEFT JOIN products ON authors.id = products.author_id
 		WHERE
-		  customers.name ILIKE ${`%${query}%`} OR
-        customers.email ILIKE ${`%${query}%`}
-		GROUP BY customers.id, customers.name, customers.email, customers.image_url
-		ORDER BY customers.name ASC
+		  authors.name ILIKE ${`%${query}%`} OR
+        authors.email ILIKE ${`%${query}%`}
+		GROUP BY authors.id, authors.name, authors.email, authors.image_url
+		ORDER BY authors.name ASC
 	  `;
 
-    const customers = data.rows.map((customer) => ({
-      ...customer,
-      total_pending: formatCurrency(customer.total_pending),
-      total_paid: formatCurrency(customer.total_paid)
+    const authors = data.rows.map((author) => ({
+      ...author,
+      total_pending: formatCurrency(author.total_pending),
+      total_paid: formatCurrency(author.total_paid)
     }));
 
-    return customers;
+    return authors;
   } catch (err) {
     console.error('Database Error:', err);
-    throw new Error('Failed to fetch customer table.');
+    throw new Error('Failed to fetch author table.');
   }
 };

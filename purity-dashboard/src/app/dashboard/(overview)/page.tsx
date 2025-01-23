@@ -3,11 +3,11 @@ import { Suspense } from 'react';
 import {
   AnalyticsCards,
   CardsSkeleton,
-  LatestProjects,
+  LatestProducts,
   ReadMore,
   RevenueChartSkeleton
 } from '@/sections';
-import { LatestInvoicesSkeleton } from '@/sections/LatestInvoicesSkeleton';
+import { LatestProductsSkeleton } from '@/sections';
 import { SaleChart } from '@/sections';
 
 const Dashboard = () => {
@@ -24,8 +24,8 @@ const Dashboard = () => {
         <Suspense fallback={<RevenueChartSkeleton />}>
           <SaleChart />
         </Suspense>
-        <Suspense fallback={<LatestInvoicesSkeleton />}>
-          <LatestProjects />
+        <Suspense fallback={<LatestProductsSkeleton />}>
+          <LatestProducts />
         </Suspense>
       </section>
     </main>
