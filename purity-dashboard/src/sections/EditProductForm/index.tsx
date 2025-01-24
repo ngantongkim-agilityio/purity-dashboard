@@ -20,8 +20,8 @@ export const EditProductForm = ({
   authors: AuthorField[];
 }) => {
   const initialState: State = { message: null, errors: {} };
-  const updateproductWithId = updateProduct.bind(null, product.id);
-  const [state, formAction] = useActionState(updateproductWithId, initialState);
+  const updateProductWithId = updateProduct.bind(null, product.id);
+  const [state, formAction] = useActionState(updateProductWithId, initialState);
 
   return (
     <form action={formAction}>

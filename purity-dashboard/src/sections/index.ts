@@ -12,3 +12,4 @@ export * from './ProductsTable';
 export * from './CreateProductForm';
 export * from './EditProductForm';
 export * from './LatestProductsSkeleton';
+export * from './AuthorsSkeleton';

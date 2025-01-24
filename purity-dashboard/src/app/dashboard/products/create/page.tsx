@@ -1,5 +1,6 @@
 import { fetchAuthors } from '@/actions/author';
 import { Breadcrumbs } from '@/components';
+import { ROUTES } from '@/constants';
 import { CreateProductForm } from '@/sections';
 
 const CreateProductPage = async () => {
@@ -9,10 +10,10 @@ const CreateProductPage = async () => {
     <main>
       <Breadcrumbs
         breadcrumbs={[
-          { label: 'Products', href: '/dashboard/products' },
+          { label: 'Products', href: ROUTES.PRODUCTS },
           {
             label: 'Create Product',
-            href: '/dashboard/Products/create',
+            href: ROUTES.CREATE_PRODUCT,
             active: true
           }
         ]}
