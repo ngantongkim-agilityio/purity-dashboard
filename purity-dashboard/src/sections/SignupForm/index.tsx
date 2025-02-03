@@ -8,10 +8,15 @@ import { Button, Input, Text } from '@/components';
 
 // Constants
 import { ROUTES } from '@/constants';
-import { State, signup } from '@/actions/auth';
+
+// Actions
+import { signup } from '@/actions';
+
+// Types
+import { AuthState } from '@/types';
 
 export const SignupForm = memo(() => {
-  const initialState: State = {
+  const initialState: AuthState = {
     data: undefined,
     message: null,
     errors: undefined
@@ -81,12 +86,12 @@ export const SignupForm = memo(() => {
         <div className='flex flex-col gap-y-5'>
           <div className='h-[78px] flex flex-col justify-center'>
             <Button
-              className='mt-4 w-full'
-              aria-disabled={isPending}
+              // className='mt-4 w-full'
+              // aria-disabled={isPending}
               type='submit'
-              // size='lg'
-              // // isDisabled={isPending}
-              // isLoading={isPending}
+              size='lg'
+              isDisabled={isPending}
+              isLoading={isPending}
             >
               Sign up
             </Button>

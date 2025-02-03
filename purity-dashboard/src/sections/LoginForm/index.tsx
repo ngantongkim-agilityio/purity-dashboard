@@ -47,13 +47,13 @@ export const LoginForm = memo(() => {
       <div className='flex flex-col gap-y-5'>
         <div className='h-[60px] flex flex-col justify-center'>
           <Button
-            type='submit'
-            className='w-full'
-            aria-disabled={isPending}
             // type='submit'
-            // size='lg'
-            // // isDisabled={isPending}
-            // isLoading={isPending}
+            // className='w-full'
+            // aria-disabled={isPending}
+            type='submit'
+            size='lg'
+            isDisabled={isPending}
+            isLoading={isPending}
           >
             Sign in
           </Button>
