@@ -1,5 +1,6 @@
 'use client';
 
+// libs
 import { useActionState } from 'react';
 import Link from 'next/link';
 import {
@@ -8,12 +9,22 @@ import {
   CurrencyDollarIcon,
   UserCircleIcon
 } from '@heroicons/react/24/outline';
-import { State, createProduct } from '@/actions/product';
-import { AuthorField } from '@/types';
-import { Button } from '@/components';
+
+// components
+import { Button, Text } from '@/components';
+
+// actions
+import { createProduct } from '@/actions';
+
+// types
+import { AuthorField, ProductState } from '@/types';
 
 export const CreateProductForm = ({ authors }: { authors: AuthorField[] }) => {
-  const initialState: State = { message: null, errors: {} };
+  const initialState: ProductState = {
+    product: null,
+    message: null,
+    errors: {}
+  };
   const [state, formAction] = useActionState(createProduct, initialState);
 
   return (
@@ -44,12 +55,11 @@ export const CreateProductForm = ({ authors }: { authors: AuthorField[] }) => {
             <UserCircleIcon className='pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500' />
           </div>
           <div id='author-error' aria-live='polite' aria-atomic='true'>
-            {state.errors?.authorId &&
-              state.errors.authorId.map((error: string) => (
-                <p className='mt-2 text-sm text-red-500' key={error}>
-                  {error}
-                </p>
-              ))}
+            {state.errors?.authorId?.map((error: any) => (
+              <Text className='mt-2 text-sm text-danger' key={error}>
+                {error}
+              </Text>
+            ))}
           </div>
         </div>
 
@@ -70,6 +80,13 @@ export const CreateProductForm = ({ authors }: { authors: AuthorField[] }) => {
               />
               <CurrencyDollarIcon className='pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900' />
             </div>
+          </div>
+          <div id='amount-error' aria-live='polite' aria-atomic='true'>
+            {state.errors?.amount?.map((error: any) => (
+              <Text className='mt-2 text-sm text-danger' key={error}>
+                {error}
+              </Text>
+            ))}
           </div>
         </div>
 
@@ -111,6 +128,13 @@ export const CreateProductForm = ({ authors }: { authors: AuthorField[] }) => {
                 </label>
               </div>
             </div>
+          </div>
+          <div id='status-error' aria-live='polite' aria-atomic='true'>
+            {state.errors?.status?.map((error: any) => (
+              <Text className='mt-2 text-sm text-danger' key={error}>
+                {error}
+              </Text>
+            ))}
           </div>
         </fieldset>
       </div>

@@ -1,15 +1,16 @@
 // Components
 import { Text } from '@/components';
+import { fetchRevenue } from '@/services';
 
 // Actions
-import { fetchRevenue } from '@/actions/revenue';
+// import { fetchRevenue } from '@/actions/revenue';
 
 // Utils
 import { generateYAxis } from '@/utils';
 import { CalendarIcon } from '@heroicons/react/24/outline';
 
 export const SaleChart = async () => {
-  const revenue = await fetchRevenue();
+  const { revenue } = await fetchRevenue();
 
   const chartHeight = 250;
   const { yAxisLabels, topLabel } = generateYAxis(revenue);

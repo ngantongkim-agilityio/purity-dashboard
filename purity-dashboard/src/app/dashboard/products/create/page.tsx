@@ -1,10 +1,17 @@
-import { fetchAuthors } from '@/actions/author';
+// components
 import { Breadcrumbs } from '@/components';
-import { ROUTES } from '@/constants';
+
+// sections
 import { CreateProductForm } from '@/sections';
 
+// constants
+import { ROUTES } from '@/constants';
+
+// actions
+import { fetchAuthors } from '@/actions';
+
 const CreateProductPage = async () => {
-  const authors = await fetchAuthors();
+  const { authors } = await fetchAuthors();
 
   return (
     <main>

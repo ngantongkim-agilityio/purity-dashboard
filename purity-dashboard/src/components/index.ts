@@ -11,3 +11,5 @@ export * from './SearchInput';
 export * from './Pagination';
 export * from './Status';
 export * from './Breadcrumbs';
+export * from './Switch';
+export * from './Checkbox';

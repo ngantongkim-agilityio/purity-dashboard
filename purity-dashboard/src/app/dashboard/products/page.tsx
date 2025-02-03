@@ -1,11 +1,18 @@
+// libs
 import { Suspense } from 'react';
 import { Metadata } from 'next';
-import { Pagination, SearchInput } from '@/components';
-import { fetchProductsPages } from '@/actions/product';
-import { LatestProductsSkeleton } from '@/sections/LatestProductsSkeleton';
-import { ProductsTable } from '@/sections';
 import Link from 'next/link';
 import { PlusIcon } from '@heroicons/react/24/outline';
+
+// components
+import { Pagination, SearchInput } from '@/components';
+
+// sections
+import { LatestProductsSkeleton } from '@/sections/LatestProductsSkeleton';
+import { ProductsTable } from '@/sections';
+
+// actions
+import { fetchProductsPages } from '@/services';
 
 export const metadata: Metadata = {
   title: 'Products'
@@ -20,7 +27,7 @@ const ProductsPage = async (props: {
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
-  const totalPages = await fetchProductsPages(query);
+  const { totalPages } = await fetchProductsPages(query);
 
   return (
     <div className='w-full'>

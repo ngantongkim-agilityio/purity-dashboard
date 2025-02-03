@@ -1,14 +1,16 @@
 import { Card } from '@/components';
-import { fetchCardData } from '@/actions/revenue';
+import { fetchAnalytics } from '@/services';
 import { WalletIcon, GlobeIcon, DocumentIcon, CartIcon } from '@/icons';
 
 export const AnalyticsCards = async () => {
+  const { analytics } = await fetchAnalytics();
   const {
-    numberOfProducts,
-    numberOfAuthors,
-    totalPaidProducts,
-    totalPendingProducts
-  } = await fetchCardData();
+    numberOfAuthors = 0,
+    numberOfProducts = 0,
+    totalPendingProducts = '',
+    totalPaidProducts = ''
+  } = analytics || {};
+
   return (
     <>
       <Card title='Total Money' value={totalPaidProducts} icon={WalletIcon} />

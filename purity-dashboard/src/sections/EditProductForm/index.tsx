@@ -1,16 +1,23 @@
 'use client';
 
+// libs
 import { useActionState } from 'react';
+import Link from 'next/link';
 import {
   CheckIcon,
   ClockIcon,
   CurrencyDollarIcon,
   UserCircleIcon
 } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import { AuthorField, ProductForm } from '@/types';
-import { State, updateProduct } from '@/actions/product';
+
+// components
 import { Button } from '@/components';
+
+// actions
+import { updateProduct } from '@/actions/product';
+
+// types
+import { AuthorField, ProductForm, ProductState } from '@/types';
 
 export const EditProductForm = ({
   product,
@@ -19,7 +26,11 @@ export const EditProductForm = ({
   product: ProductForm;
   authors: AuthorField[];
 }) => {
-  const initialState: State = { message: null, errors: {} };
+  const initialState: ProductState = {
+    product: null,
+    message: null,
+    errors: {}
+  };
   const updateProductWithId = updateProduct.bind(null, product.id);
   const [state, formAction] = useActionState(updateProductWithId, initialState);
 

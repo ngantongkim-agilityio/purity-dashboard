@@ -1,6 +1,6 @@
 'use client';
 
-import { deleteProduct } from '@/actions/product';
+import { deleteProduct } from '@/actions';
 import { TrashIcon } from '@heroicons/react/24/outline';
 
 export const DeleteProductButton = ({ id }: { id: string }) => {

@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import { fetchFilteredProducts } from '@/actions/product';
-import { formatCurrency, formatDateToLocal } from '@/utils';
-import { Status } from '@/components';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Status } from '@/components';
 import { PencilIcon } from '@heroicons/react/24/outline';
 import { DeleteProductButton } from '../DeleteProductButton';
+import { fetchFilteredProducts } from '@/services';
+import { formatCurrency, formatDateToLocal } from '@/utils';
 
 export const ProductsTable = async ({
   query,
@@ -13,49 +13,54 @@ export const ProductsTable = async ({
   query: string;
   currentPage: number;
 }) => {
-  const products = await fetchFilteredProducts(query, currentPage);
+  const { products } = await fetchFilteredProducts(query, currentPage);
 
   return (
     <div className='mt-6 flow-root'>
       <div className='inline-block min-w-full align-middle'>
         <div className='rounded-lg bg-gray-50 p-2 md:pt-0'>
-          {/* <div className="md:hidden">
+          <div className='md:hidden'>
             {products?.map((product) => (
               <div
                 key={product.id}
-                className="mb-2 w-full rounded-md bg-white p-4"
+                className='mb-2 w-full rounded-md bg-white p-4'
               >
-                <div className="flex items-center justify-between border-b pb-4">
+                <div className='flex items-center justify-between border-b pb-4'>
                   <div>
-                    <div className="mb-2 flex items-center">
+                    <div className='mb-2 flex items-center'>
                       <Image
                         src={product.image_url}
-                        className="mr-2 rounded-full"
+                        className='mr-2 rounded-full'
                         width={28}
                         height={28}
                         alt={`${product.name}'s profile picture`}
                       />
                       <p>{product.name}</p>
                     </div>
-                    <p className="text-sm text-gray-500">{product.email}</p>
+                    <p className='text-sm text-gray-500'>{product.email}</p>
                   </div>
                   <Status status={product.status} />
                 </div>
-                <div className="flex w-full items-center justify-between pt-4">
+                <div className='flex w-full items-center justify-between pt-4'>
                   <div>
-                    <p className="text-xl font-medium">
+                    <p className='text-xl font-medium'>
                       {formatCurrency(product.amount)}
                     </p>
                     <p>{formatDateToLocal(product.date)}</p>
                   </div>
-                  <div className="flex justify-end gap-2">
-                    <UpdateProduct id={product.id} />
-                    <DeleteProduct id={product.id} />
+                  <div className='flex justify-end gap-2'>
+                    <Link
+                      href={`/dashboard/products/${product.id}/edit`}
+                      className='rounded-md border p-2 hover:bg-gray-100'
+                    >
+                      <PencilIcon className='w-5' />
+                    </Link>
+                    <DeleteProductButton id={product.id} />
                   </div>
                 </div>
               </div>
             ))}
-          </div> */}
+          </div>
           <table className='hidden min-w-full text-gray-900 md:table'>
             <thead className='rounded-lg text-left text-sm font-normal'>
               <tr>

@@ -23,7 +23,7 @@ export const Input = memo(
           input:
             'text-secondary-300 placeholder:text-secondary-200 bg-primary-100 text-sm mx-2 group-data-[invalid=true]:!text-danger rounded',
           errorMessage: 'text-danger text-xs ml-2',
-          label: 'top-5 text-sm group-data-[invalid=true]:!text-danger'
+          label: 'top-5 text-sm group-data-[invalid=true]:!text-secondary-300'
         }
       },
       size: {

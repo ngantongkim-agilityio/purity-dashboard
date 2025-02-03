@@ -1,5 +1,3 @@
-import RTL from '@/app/dashboard/rtl/page';
-
 export const ROUTES = {
   HOME: '/',
   LOGIN: '/login',

@@ -1,12 +1,18 @@
-import { fetchLatestProducts } from '@/actions/product';
-import { Text } from '@/components';
-import { cn } from '@/utils';
-import { ArrowPathIcon } from '@heroicons/react/24/outline';
-import { log } from 'console';
+// libs
 import Image from 'next/image';
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
+
+// components
+import { Text } from '@/components';
+
+// services
+import { fetchLatestProducts } from '@/services';
+
+// utils
+import { cn } from '@/utils';
 
 export const LatestProducts = async () => {
-  const latestProducts = await fetchLatestProducts();
+  const { products } = await fetchLatestProducts();
 
   return (
     <div className='flex w-full flex-col md:col-span-4 bg-primary-100 rounded-xl shadow-secondary-50 shadow-md p-4 space-y-2'>
@@ -15,7 +21,7 @@ export const LatestProducts = async () => {
       </Text>
       <div className='flex grow flex-col justify-between'>
         <div className='bg-white px-6'>
-          {latestProducts.map((product, i) => {
+          {products.map((product, i) => {
             return (
               <div
                 key={product.id}

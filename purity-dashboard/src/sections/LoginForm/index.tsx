@@ -2,10 +2,10 @@
 
 import { memo, useActionState } from 'react';
 import Link from 'next/link';
-import { Link as NextUILink, Switch } from '@heroui/react';
+// import { Switch } from '@heroui/react';
 
 // Components
-import { Button, Input } from '@/components';
+import { Button, Input, Text, Switch, Checkbox } from '@/components';
 
 // Actions
 import { authenticate } from '@/actions/auth';
@@ -19,8 +19,10 @@ export const LoginForm = memo(() => {
     undefined
   );
 
+  console.log('errorMessage ===>', errorMessage);
+
   return (
-    <form className='flex flex-col w-full mt-9 gap-y-9' action={formAction}>
+    <form className='flex flex-col w-full mt-9 gap-y-8' action={formAction}>
       <div>
         <Input
           name='email'
@@ -34,28 +36,38 @@ export const LoginForm = memo(() => {
           labelPlacement='outside'
           placeholder='Your email address'
         />
-        <Switch>Remember me</Switch>
+        <input id='remember' name='remember' type='checkbox' />
+        <label htmlFor='remember'>Remember me</label>
+        {/* <Switch id="remember" name='remember' aria-label="Remember" >Remember</Switch> */}
+        {/* <Checkbox id="remember" name='remember' aria-label="Remember" >Remember</Checkbox> */}
+        {!!errorMessage && (
+          <Text className='mt-2 text-sm text-danger'>{errorMessage}</Text>
+        )}
       </div>
       <div className='flex flex-col gap-y-5'>
-        <Button
-          type='submit'
-          size='lg'
-          isDisabled={isPending}
-          isLoading={isPending}
-        >
-          Sign in
-        </Button>
+        <div className='h-[60px] flex flex-col justify-center'>
+          <Button
+            type='submit'
+            className='w-full'
+            aria-disabled={isPending}
+            // type='submit'
+            // size='lg'
+            // // isDisabled={isPending}
+            // isLoading={isPending}
+          >
+            Sign in
+          </Button>
+        </div>
         <div className='flex justify-center w-full gap-1'>
           <p className='text-secondary-200 text-sm'>
             Don&rsquo;t have an account?
           </p>
-          <NextUILink
-            as={Link}
+          <Link
             className='font-semibold text-primary text-sm'
             href={ROUTES.SIGNUP}
           >
             Sign up
-          </NextUILink>
+          </Link>
         </div>
       </div>
     </form>

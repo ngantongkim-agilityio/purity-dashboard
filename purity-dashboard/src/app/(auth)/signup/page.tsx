@@ -1,14 +1,18 @@
 import { Metadata } from 'next';
+import dynamic, { Loader } from 'next/dynamic';
 
 // Constants
 import { BACKGROUND } from '@/constants';
 
 // Components
 import { Image, Text } from '@/components';
-import { SignupForm } from '@/sections/SignupForm';
 
 // Utils
 import { generateImageToBase64 } from '@/utils';
+
+const SignupForm = dynamic(() =>
+  import('@/sections/SignupForm').then((module) => module.SignupForm)
+);
 
 export const metadata: Metadata = {
   title: 'Signup'
@@ -16,7 +20,7 @@ export const metadata: Metadata = {
 
 const SignUpPage = () => {
   return (
-    <main className='bg-primary-100 relative w-full h-full p-6'>
+    <div className='bg-primary-100 relative w-full h-full p-6'>
       <div className='relative w-full h-1/2'>
         <Image
           alt='signup background'
@@ -39,7 +43,7 @@ const SignUpPage = () => {
           <SignupForm />
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

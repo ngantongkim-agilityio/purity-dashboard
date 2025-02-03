@@ -1,5 +1,7 @@
+// libs
 import { Suspense } from 'react';
 
+// sections
 import {
   AnalyticsCards,
   CardsSkeleton,
