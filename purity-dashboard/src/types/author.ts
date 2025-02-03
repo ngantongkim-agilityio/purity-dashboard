@@ -29,3 +29,13 @@ export type AuthorField = {
   id: string;
   name: string;
 };
+
+export type AuthorData = {
+  id: string;
+  name: string;
+  email: string;
+  image_url: string;
+  total_products: number;
+  total_pending: string;
+  total_paid: string;
+};

@@ -4,3 +4,11 @@ export type User = {
   email: string;
   password: string;
 };
+
+export type UserSession = {
+  id: string;
+  name: string;
+  email: string;
+  remember: string;
+  expires: string;
+};

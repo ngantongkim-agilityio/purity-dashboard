@@ -1,11 +1,38 @@
 import type { NextAuthConfig } from 'next-auth';
 import { ROUTES } from '@/constants';
 
+const maxAge = 24 * 60 * 60;
+
 export const authConfig = {
   pages: {
     signIn: ROUTES.LOGIN
   },
   callbacks: {
+    async jwt({ user, token }) {
+      if (user) {
+        token.sub = user.id;
+        token['email'] = user.email;
+        token['expires'] = user.expires;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (token) {
+        session.user.id = token.sub as string;
+        session.user.email = token['email'] as string;
+        session.expires = new Date(token['expires']).toISOString() as Date &
+          string;
+
+        if (Date.now() < new Date(session?.expires || '').getTime()) {
+          return session;
+        } else {
+          return {
+            ...session,
+            user: null
+          } as any;
+        }
+      }
+    },
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
       const isPrivateRoute = nextUrl.pathname.startsWith(ROUTES.DASHBOARD);
@@ -27,5 +54,9 @@ export const authConfig = {
       return true;
     }
   },
-  providers: []
+  providers: [],
+  session: {
+    strategy: 'jwt',
+    maxAge
+  }
 } satisfies NextAuthConfig;

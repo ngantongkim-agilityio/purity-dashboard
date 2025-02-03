@@ -2,8 +2,8 @@ export type Product = {
   id: string;
   author_id: string;
   amount: number;
-  date: string;
   status: 'pending' | 'paid';
+  date?: string;
 };
 
 export type Revenue = {
@@ -40,4 +40,19 @@ export type ProductForm = {
   author_id: string;
   amount: number;
   status: 'pending' | 'paid';
+};
+
+export type LatestProductsResponse = {
+  products: LatestProduct[];
+  error: string | null;
+};
+
+export type ProductState = {
+  product: Product | null;
+  errors?: {
+    authorId?: string[];
+    amount?: string[];
+    status?: string[];
+  };
+  message?: string | null;
 };
