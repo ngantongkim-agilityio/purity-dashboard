@@ -1,6 +1,6 @@
 'use server';
 
-// services
+// Services
 import {
   fetchProductById as fetchProductByIdService,
   fetchFilteredProducts as fetchFilteredProductsService,
@@ -9,7 +9,7 @@ import {
   deleteProduct as deleteProductService
 } from '@/services';
 
-// types
+// Types
 import { ProductState, ProductsTable } from '@/types';
 
 export const fetchFilteredProducts = async (

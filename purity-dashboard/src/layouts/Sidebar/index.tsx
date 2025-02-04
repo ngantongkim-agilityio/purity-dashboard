@@ -1,13 +1,19 @@
 import Link from 'next/link';
 // import { PowerIcon } from '@heroicons/react/24/outline';
-import { signOut } from '@/configs/auth';
+// import { signOut } from '@/configs/auth';
 import LogoIcon from '@/icons/LogoIcon';
 import { Divider, Text, NavLinks, Image, Button } from '@/components';
 import { HelpIcon, PowerIcon } from '@/icons';
 import { BACKGROUND } from '@/constants';
 import { generateImageToBase64 } from '@/utils';
+import { signOut } from '@/actions';
 
 export const Sidebar = () => {
+  const handleSignOut = async () => {
+    'use server';
+
+    await signOut();
+  };
   return (
     <aside className='flex h-full flex-col p-8 min-w-[310px] space-y-6'>
       <Link className='flex justify-start space-x-3 px-4 py-2' href='/'>
@@ -45,17 +51,15 @@ export const Sidebar = () => {
             </div>
           </div>
         </div>
-        <form
-          action={async () => {
-            'use server';
-            await signOut();
-          }}
-        >
-          <button className='flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3'>
+        <div>
+          <button
+            className='flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3'
+            onClick={handleSignOut}
+          >
             <PowerIcon customClass='w-6 h-6' />
             <div className='hidden md:block'>Sign Out</div>
           </button>
-        </form>
+        </div>
       </div>
     </aside>
   );

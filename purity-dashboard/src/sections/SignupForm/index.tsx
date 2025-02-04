@@ -86,8 +86,7 @@ export const SignupForm = memo(() => {
         <div className='flex flex-col gap-y-5'>
           <div className='h-[78px] flex flex-col justify-center'>
             <Button
-              // className='mt-4 w-full'
-              // aria-disabled={isPending}
+              aria-label='Signup button'
               type='submit'
               size='lg'
               isDisabled={isPending}

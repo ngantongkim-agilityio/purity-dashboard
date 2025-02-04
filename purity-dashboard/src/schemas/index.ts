@@ -16,6 +16,15 @@ export const SignupFormSchema = z.object({
     })
 });
 
+export const LoginFormSchema = z.object({
+  email: z
+    .string()
+    .min(1, { message: 'Email is required' })
+    .email({ message: 'Email is invalid' }),
+  password: z.string().min(1, { message: 'Password is required' }),
+  remember: z.boolean().optional()
+});
+
 export const ProductFormSchema = z.object({
   id: z.string(),
   authorId: z.string({

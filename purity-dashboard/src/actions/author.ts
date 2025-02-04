@@ -1,10 +1,10 @@
-// services
+// Services
 import {
   fetchAuthors as fetchAuthorsService,
   fetchFilteredAuthors as fetchFilteredAuthorsService
 } from '@/services';
 
-// types
+// Types
 import { AuthorData, AuthorField } from '@/types';
 
 export const fetchAuthors = async (): Promise<{

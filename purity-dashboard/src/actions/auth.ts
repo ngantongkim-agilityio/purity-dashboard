@@ -1,43 +1,61 @@
 'use server';
 
-import { signIn } from '@/configs/auth';
+// Libs
 import { AuthError } from 'next-auth';
+
+// Configs
+import {
+  signIn as nextAuthSignIn,
+  signOut as nextAuthSignOut
+} from '@/configs/auth';
+
+// Services
 import { signup as signupService } from '@/services';
+
+// Schemas
+import { LoginFormSchema } from '@/schemas';
+
+// Constants
+import { ROUTES } from '@/constants';
+
+// Types
 import { AuthState, User } from '@/types';
 
-// const LoginFormSchema = z.object({
-//   email: z.string().min(1, {message: 'Email is required'}).email({ message: 'Email is invalid' }),
-//   password: z
-//     .string()
-//     .min(1, { message: 'Password is required' })
-// });
-
 export const authenticate = async (
-  prevState: string | undefined,
+  remember: boolean,
+  prevState: AuthState | undefined,
   formData: FormData
-) => {
-  // const validatedFields = LoginFormSchema.safeParse({
-  //   email: formData.get('email'),
-  //   password: formData.get('password')
-  // });
+): Promise<AuthState | undefined> => {
+  const validatedFields = LoginFormSchema.safeParse({
+    email: formData.get('email'),
+    password: formData.get('password')
+  });
+  const data = Object.fromEntries(formData);
 
-  // // If form validation fails, return errors early. Otherwise, continue.
-  // if (!validatedFields.success) {
-  //   return {
-  //     errors: validatedFields.error.flatten().fieldErrors,
-  //     message: 'Missing Fields'
-  //   };
-  // }
+  // If form validation fails, return errors early. Otherwise, continue.
+  if (!validatedFields.success) {
+    return {
+      data: data as User,
+      errors: validatedFields.error.flatten().fieldErrors
+    };
+  }
+
+  const options = {
+    email: validatedFields.data.email,
+    password: validatedFields.data.password,
+    remember,
+    redirectTo: ROUTES.DASHBOARD
+  };
 
   try {
-    await signIn('credentials', formData);
+    await nextAuthSignIn('credentials', { ...options });
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
         case 'CredentialsSignin':
-          return 'Invalid credentials.';
+          return { message: 'Invalid credentials.' };
         default:
-          return 'Something went wrong.';
+          return { message: 'Something went wrong.' };
       }
     }
     throw error;
@@ -47,15 +65,11 @@ export const authenticate = async (
 export const signup = async (
   prevState: AuthState,
   formData: FormData
-): Promise<{
-  data?: User;
-  errors?: {
-    name?: string[];
-    email?: string[];
-    password?: string[];
-  };
-  message?: string | null;
-}> => {
+): Promise<AuthState> => {
   const data = await signupService(prevState, formData);
   return data;
+};
+
+export const signOut = async () => {
+  await nextAuthSignOut();
 };

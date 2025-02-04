@@ -1,8 +1,7 @@
 'use client';
 
-import { memo, useActionState } from 'react';
+import { memo, useActionState, useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-// import { Switch } from '@heroui/react';
 
 // Components
 import { Button, Input, Text, Switch, Checkbox } from '@/components';
@@ -13,13 +12,52 @@ import { authenticate } from '@/actions/auth';
 // Constants
 import { ROUTES } from '@/constants';
 
+// Types
+import { AuthState } from '@/types';
+
 export const LoginForm = memo(() => {
-  const [errorMessage, formAction, isPending] = useActionState(
-    authenticate,
-    undefined
+  const initialState: AuthState = {
+    data: undefined,
+    errors: undefined,
+    message: undefined
+  };
+
+  const [remember, setRemember] = useState(false);
+  const authenticateWithRememberMe = authenticate.bind(null, remember);
+  const [state, formAction, isPending] = useActionState(
+    authenticateWithRememberMe,
+    initialState
   );
 
-  console.log('errorMessage ===>', errorMessage);
+  const [errors, setResetErrors] = useState(state?.errors);
+  const [data, setData] = useState(state?.data);
+
+  useEffect(() => {
+    if (state?.errors) {
+      setResetErrors(state.errors);
+    }
+  }, [state]);
+
+  const handleChangeInput = useCallback(
+    (field: string, value: string) => {
+      setData({
+        ...data,
+        [field]: value
+      });
+      setResetErrors({
+        ...(errors || {}),
+        [field]: []
+      });
+    },
+    [data, errors]
+  );
+
+  const handleChangeRemember = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setRemember(e.target.checked);
+    },
+    []
+  );
 
   return (
     <form className='flex flex-col w-full mt-9 gap-y-8' action={formAction}>
@@ -29,27 +67,37 @@ export const LoginForm = memo(() => {
           label='Email'
           labelPlacement='outside'
           placeholder='Your email address'
+          value={data?.email}
+          errorMessage={errors?.email?.[0]}
+          isInvalid={!!errors?.email?.[0]}
+          onChange={(e) => handleChangeInput('email', e.target.value)}
         />
         <Input
           name='password'
           label='Password'
           labelPlacement='outside'
           placeholder='Your email address'
+          value={data?.password}
+          errorMessage={errors?.password?.[0]}
+          isInvalid={!!errors?.password?.[0]}
+          onChange={(e) => handleChangeInput('password', e.target.value)}
         />
-        <input id='remember' name='remember' type='checkbox' />
-        <label htmlFor='remember'>Remember me</label>
-        {/* <Switch id="remember" name='remember' aria-label="Remember" >Remember</Switch> */}
-        {/* <Checkbox id="remember" name='remember' aria-label="Remember" >Remember</Checkbox> */}
-        {!!errorMessage && (
-          <Text className='mt-2 text-sm text-danger'>{errorMessage}</Text>
+        <Switch
+          id='remember'
+          name='remember'
+          aria-label='Remember'
+          onChange={handleChangeRemember}
+        >
+          Remember me
+        </Switch>
+        {!!state?.message && (
+          <Text className='mt-2 text-sm text-danger'>{state?.message}</Text>
         )}
       </div>
       <div className='flex flex-col gap-y-5'>
         <div className='h-[60px] flex flex-col justify-center'>
           <Button
-            // type='submit'
-            // className='w-full'
-            // aria-disabled={isPending}
+            aria-label='Login button'
             type='submit'
             size='lg'
             isDisabled={isPending}

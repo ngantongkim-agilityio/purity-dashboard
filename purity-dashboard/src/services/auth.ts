@@ -29,15 +29,7 @@ const SignupUser = SignupFormSchema.omit({ id: true });
 export const signup = async (
   prevState: AuthState,
   formData: FormData
-): Promise<{
-  data?: User;
-  errors?: {
-    name?: string[];
-    email?: string[];
-    password?: string[];
-  };
-  message?: string | null;
-}> => {
+): Promise<AuthState> => {
   const validatedFields = SignupUser.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),
@@ -48,7 +40,7 @@ export const signup = async (
   // If form validation fails, return errors early. Otherwise, continue.
   if (!validatedFields.success) {
     return {
-      data: data as User,
+      data: data,
       errors: validatedFields.error.flatten().fieldErrors,
       message: 'Missing Fields'
     };
