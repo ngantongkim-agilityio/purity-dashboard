@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const LoginPage = () => {
   return (
-    <div className='bg-primary-100 w-full h-full'>
+    <main className='bg-primary-100 w-full h-full'>
       <div className='w-full flex justify-between h-full'>
         <div className='w-full md:w-1/2 h-full justify-items-center xl:justify-items-end xl:pr-44'>
           <div className='flex min-w-[353px] h-full justify-center flex-col'>
@@ -27,7 +27,7 @@ const LoginPage = () => {
             <LoginForm />
           </div>
         </div>
-        <div className='hidden md:block md:w-1/2 pl-16 pb-28'>
+        <div className='hidden md:block md:w-1/2 lg:pl-16 pb-28'>
           <div className='relative h-full'>
             <Image
               alt='login background'
@@ -41,7 +41,7 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

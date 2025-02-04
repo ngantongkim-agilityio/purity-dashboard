@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { signOut } from '@/configs/auth';
 import LogoIcon from '@/icons/LogoIcon';
 import { Divider, Text, NavLinks, Image, Button } from '@/components';
-import { HelpIcon } from '@/icons';
+import { HelpIcon, PowerIcon } from '@/icons';
 import { BACKGROUND } from '@/constants';
 import { generateImageToBase64 } from '@/utils';
 
@@ -21,9 +21,9 @@ export const Sidebar = () => {
         </Text>
       </Link>
       <Divider variant='linear' />
-      <div className='flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2'>
-        <div>
-          <NavLinks />
+      <div className='flex grow flex-row justify-between space-x-4 md:flex-col md:space-x-0 md:space-y-2'>
+        <NavLinks />
+        <div className='hidden h-auto grow md:block'>
           <div className='relative rounded-xl w-full h-[169px] mt-16'>
             <Image
               alt='Need help background'
@@ -52,7 +52,7 @@ export const Sidebar = () => {
           }}
         >
           <button className='flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3'>
-            {/* <PowerIcon className='w-6' /> */}
+            <PowerIcon customClass='w-6 h-6' />
             <div className='hidden md:block'>Sign Out</div>
           </button>
         </form>

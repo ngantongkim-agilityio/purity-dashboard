@@ -16,7 +16,7 @@ const Dashboard = () => {
   return (
     <main className='space-y-6'>
       <h1 className={`mb-4 text-xl md:text-2xl`}>Dashboard</h1>
-      <section className='grid gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+      <section className='grid gap-6 sm:grid-cols-2 xl:grid-cols-4'>
         <Suspense fallback={<CardsSkeleton />}>
           <AnalyticsCards />
         </Suspense>

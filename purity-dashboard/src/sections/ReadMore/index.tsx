@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 export const ReadMore = () => {
   return (
-    <div className='flex flex-col lg:flex-row lg:justify-between gap-6'>
-      <div className='lg:w-3/5 flex justify-between w-full bg-primary-100 rounded-xl p-4 shadow-secondary-50 shadow-md'>
+    <div className='flex flex-col xl:flex-row xl:justify-between gap-6'>
+      <div className='xl:w-3/5 flex justify-between w-full bg-primary-100 rounded-xl p-4 shadow-secondary-50 shadow-md'>
         <div className='max-w-[330px] flex flex-col justify-between'>
           <div className='space-y-0.5'>
             <Text size='xs' className='font-bold text-secondary-200'>
@@ -35,7 +35,7 @@ export const ReadMore = () => {
           />
         </div>
       </div>
-      <div className='lg:w-2/5 bg-primary-100 rounded-xl p-4 shadow-secondary-50 shadow-md'>
+      <div className='xl:w-2/5 bg-primary-100 rounded-xl p-4 shadow-secondary-50 shadow-md'>
         <div className='relative rounded-xl w-full h-[255px]'>
           <Image
             alt='rockets read more background'

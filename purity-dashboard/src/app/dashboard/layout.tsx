@@ -12,7 +12,7 @@ const DashboardLayout = async ({
   children: React.ReactNode;
 }>) => {
   const session = await auth();
-  // console.log('session ===>', session);
+  console.log('session ===>', session);
 
   return (
     <SessionProvider session={session}>
@@ -20,7 +20,10 @@ const DashboardLayout = async ({
         <Sidebar />
         <div className='flex-grow min-h-screen flex flex-col justify-between p-6 md:overflow-y-auto md:px-8'>
           {children}
-          <Footer />
+          <Footer
+            className='w-full grid grid-cols-1 gap-6 lg:grid-cols-2'
+            subClassName='self-start justify-start lg:w-full'
+          />
         </div>
       </div>
     </SessionProvider>
