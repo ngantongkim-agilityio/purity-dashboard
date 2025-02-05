@@ -6,5 +6,6 @@ export const BACKGROUND = {
 
 export const IMAGES = {
   buildReadMore: '/images/build-read-more.webp',
-  rocketsReadMore: '/images/rockets-read-more.webp'
+  rocketsReadMore: '/images/rockets-read-more.webp',
+  emptyImage: '/images/empty-image.webp'
 };

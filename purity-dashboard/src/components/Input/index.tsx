@@ -10,10 +10,10 @@ export const Input = memo(
       variant: {
         default: {
           inputWrapper: cn(
-            'bg-background group-data-[hover=true]:opacity-95 group-data-[focus=true]:opacity-95 group-data-[invalid=true]:border-danger'
+            'bg-primary-100 group-data-[hover=true]:opacity-95 group-data-[focus=true]:opacity-95 group-data-[invalid=true]:border-danger'
           ),
           input:
-            'text-secondary-300 placeholder:text-secondary-200 bg-100 text-sm mx-2 group-data-[invalid=true]:!text-danger-100',
+            'text-secondary-300 placeholder:text-secondary-200 bg-primary-100 text-sm mx-2 group-data-[invalid=true]:!text-danger-100',
           errorMessage: 'text-danger text-xs ml-2'
         },
         bordered: {

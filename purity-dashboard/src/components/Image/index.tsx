@@ -6,6 +6,7 @@ import NextImage, { ImageProps } from 'next/image';
 
 // Utils
 import { cn } from '@/utils';
+import { IMAGES } from '@/constants';
 
 interface ImageFallbackProps extends ImageProps {
   src: string;
@@ -19,8 +20,10 @@ export const Image = memo(
     src,
     alt,
     blurDataURL,
-    fallbackSrc = '',
+    fallbackSrc = IMAGES.emptyImage,
     className,
+    width,
+    height,
     ...props
   }: ImageFallbackProps) => {
     const [imgSrc, setImgSrc] = useState(src);
@@ -45,9 +48,8 @@ export const Image = memo(
         priority
         src={imgSrc}
         alt={alt}
-        fill
-        placeholder='blur'
-        blurDataURL={blurDataURL}
+        {...(width && height ? { width, height } : { fill: true })}
+        {...(blurDataURL ? { placeholder: 'blur', blurDataURL } : {})}
         onLoad={handleLoad}
         onError={handleError}
         className={cn(
