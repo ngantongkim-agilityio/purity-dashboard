@@ -1,5 +1,7 @@
+// Libs
+
 import { Metadata } from 'next';
-import dynamic, { Loader } from 'next/dynamic';
+import dynamic from 'next/dynamic';
 
 // Constants
 import { BACKGROUND } from '@/constants';

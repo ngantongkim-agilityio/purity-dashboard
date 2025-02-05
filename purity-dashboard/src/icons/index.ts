@@ -12,3 +12,4 @@ export * from './DocumentIcon';
 export * from './CartIcon';
 export * from './ArrowIcon';
 export * from './PowerIcon';
+export * from './LogoIcon';

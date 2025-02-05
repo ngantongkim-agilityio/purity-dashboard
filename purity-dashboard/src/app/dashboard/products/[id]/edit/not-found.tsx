@@ -1,6 +1,11 @@
+// Libs
 import Link from 'next/link';
 import { FaceFrownIcon } from '@heroicons/react/24/outline';
+
+// Components
 import { Text } from '@/components';
+
+// Constants
 import { ROUTES } from '@/constants';
 
 const NotFound = () => {

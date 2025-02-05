@@ -1,10 +1,12 @@
 'use client';
 
-import { generatePagination } from '@/utils';
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
-import clsx from 'clsx';
+// Libs
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+
+// Utils
+import { cn, generatePagination } from '@/utils';
 
 export const Pagination = ({ totalPages }: { totalPages: number }) => {
   const pathname = usePathname();
@@ -70,7 +72,7 @@ const PaginationNumber = ({
   position?: 'first' | 'last' | 'middle' | 'single';
   isActive: boolean;
 }) => {
-  const className = clsx(
+  const className = cn(
     'flex h-10 w-10 items-center justify-center text-sm border',
     {
       'rounded-l-md': position === 'first' || position === 'single',
@@ -99,7 +101,7 @@ const PaginationArrow = ({
   direction: 'left' | 'right';
   isDisabled?: boolean;
 }) => {
-  const className = clsx(
+  const className = cn(
     'flex h-10 w-10 items-center justify-center rounded-md border',
     {
       'pointer-events-none text-gray-300': isDisabled,

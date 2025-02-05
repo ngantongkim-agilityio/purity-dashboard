@@ -1,5 +1,11 @@
+// Libs
+
 import { JSX } from 'react';
+
+// Components
 import { Text } from '../Text';
+
+// Types
 import { CustomClassType } from '@/types';
 
 export const Card = ({

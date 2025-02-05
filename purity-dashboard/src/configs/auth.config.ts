@@ -1,4 +1,7 @@
+// Libs
 import type { NextAuthConfig } from 'next-auth';
+
+// Constants
 import { ROUTES } from '@/constants';
 
 const maxAge = 24 * 60 * 60;

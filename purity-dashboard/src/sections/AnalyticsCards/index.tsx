@@ -1,6 +1,9 @@
+// Components
 import { Card } from '@/components';
-import { fetchAnalytics } from '@/services';
 import { WalletIcon, GlobeIcon, DocumentIcon, CartIcon } from '@/icons';
+
+// Services
+import { fetchAnalytics } from '@/services';
 
 export const AnalyticsCards = async () => {
   const { analytics } = await fetchAnalytics();

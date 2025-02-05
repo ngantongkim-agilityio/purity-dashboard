@@ -1,5 +1,5 @@
-import { cn } from '@/utils';
 import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { cn } from '@/utils';
 
 export const Status = ({ status }: { status: string }) => {
   return (

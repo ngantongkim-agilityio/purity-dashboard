@@ -1,9 +1,10 @@
+// Libs
 import { SessionProvider } from 'next-auth/react';
 
 // Config
 import { auth } from '@/configs/auth';
 
-// layouts
+// Layouts
 import { Sidebar, Footer } from '@/layouts';
 
 const DashboardLayout = async ({
@@ -12,7 +13,6 @@ const DashboardLayout = async ({
   children: React.ReactNode;
 }>) => {
   const session = await auth();
-  console.log('session ===>', session);
 
   return (
     <SessionProvider session={session}>

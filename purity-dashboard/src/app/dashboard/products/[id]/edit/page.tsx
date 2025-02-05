@@ -1,13 +1,13 @@
-// libs
+// Libs
 import { notFound } from 'next/navigation';
 
-// components
+// Components
 import { Breadcrumbs } from '@/components';
 
-// sections
+// Sections
 import { EditProductForm } from '@/sections';
 
-// actions
+// Actions
 import { fetchAuthors, fetchProductById } from '@/actions';
 
 const EditProductPage = async (props: { params: Promise<{ id: string }> }) => {

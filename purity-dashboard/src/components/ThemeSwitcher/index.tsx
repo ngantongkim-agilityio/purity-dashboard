@@ -1,7 +1,8 @@
 'use client';
 
-import { useTheme } from 'next-themes';
+// Libs
 import { useCallback, useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 // Components
 import { Button } from '@/components';

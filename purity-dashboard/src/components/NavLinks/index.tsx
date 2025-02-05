@@ -1,11 +1,18 @@
 'use client';
 
-import { DASHBOARD_NAV_LINKS } from '@/constants';
-import { CustomClassType } from '@/types';
-import { cn } from '@/utils';
+// Libs
+import { JSX } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { JSX } from 'react';
+
+// Constants
+import { DASHBOARD_NAV_LINKS } from '@/constants';
+
+// Utils
+import { cn } from '@/utils';
+
+// Types
+import { CustomClassType } from '@/types';
 
 type LinkItem = {
   name: string;
@@ -21,7 +28,7 @@ export const NavLinks = ({ links = DASHBOARD_NAV_LINKS }: NavLinksProps) => {
   const pathname = usePathname();
 
   return (
-    <nav className='flex grow flex-row md:grow-0 justify-between md:flex-col space-x-4 md:space-x-0 sm:mr-16 md:mr-0'>
+    <nav className='flex grow flex-row md:grow-0 justify-between md:flex-col space-x-4 md:space-x-0 md:space-y-2 sm:mr-16 md:mr-0'>
       {links.map(({ name, href, icon }) => {
         const LinkIcon = icon;
 
@@ -30,7 +37,7 @@ export const NavLinks = ({ links = DASHBOARD_NAV_LINKS }: NavLinksProps) => {
             key={name}
             href={href}
             className={cn(
-              'flex grow md:grow-0 justify-center items-center gap-3 rounded-xl bg-secondary-100 md:bg-transparent text-secondary-200 text-xs font-bold hover:bg-secondary-50 md:flex-none md:justify-start p-3',
+              'flex grow md:grow-0 justify-center items-center gap-3 rounded-xl bg-secondary-100 text-secondary-200 text-xs font-bold hover:bg-secondary-50 md:flex-none md:justify-start p-3',
               {
                 'bg-primary-100 text-secondary-300 shadow-secondary-50 shadow-md':
                   pathname === href

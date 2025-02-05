@@ -4,7 +4,7 @@ import { memo, useActionState, useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 
 // Components
-import { Button, Input, Text, Switch, Checkbox } from '@/components';
+import { Button, Input, Text, Switch } from '@/components';
 
 // Actions
 import { authenticate } from '@/actions/auth';

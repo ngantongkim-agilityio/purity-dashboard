@@ -1,12 +1,12 @@
-// libs
+// Libs
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 
-// sections
+// Sections
 import { AuthorsTable } from '@/sections';
 import { LatestProductsSkeleton } from '@/sections/LatestProductsSkeleton';
 
-// actions
+// Actions
 import { fetchFilteredAuthors } from '@/actions';
 
 export const metadata: Metadata = {

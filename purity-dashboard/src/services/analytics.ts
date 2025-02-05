@@ -1,5 +1,3 @@
-'use server';
-
 import { BASE_API, ROUTE_ENDPOINT } from '@/constants';
 
 export const fetchAnalytics = async (): Promise<{

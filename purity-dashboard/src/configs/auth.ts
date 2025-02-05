@@ -1,7 +1,12 @@
+// Libs
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
-import { authConfig } from './auth.config';
 import bcrypt from 'bcrypt';
+
+// Configs
+import { authConfig } from './auth.config';
+
+// Services
 import { getUser } from '@/services';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({

@@ -1,11 +1,19 @@
+// Libs
 import Link from 'next/link';
-// import { PowerIcon } from '@heroicons/react/24/outline';
-// import { signOut } from '@/configs/auth';
-import LogoIcon from '@/icons/LogoIcon';
+
+// Components
 import { Divider, Text, NavLinks, Image, Button } from '@/components';
-import { HelpIcon, PowerIcon } from '@/icons';
+
+// Icons
+import { LogoIcon, HelpIcon, PowerIcon } from '@/icons';
+
+// Constants
 import { BACKGROUND } from '@/constants';
+
+// Utils
 import { generateImageToBase64 } from '@/utils';
+
+// Actions
 import { signOut } from '@/actions';
 
 export const Sidebar = () => {

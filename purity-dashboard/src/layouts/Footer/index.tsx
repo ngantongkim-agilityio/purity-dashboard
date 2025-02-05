@@ -1,6 +1,13 @@
+// Libs
 import Link from 'next/link';
-import { FOOTER_NAVIGATION, ROUTES } from '@/constants';
+
+// Components
 import { Text } from '@/components';
+
+// Constants
+import { FOOTER_NAVIGATION, ROUTES } from '@/constants';
+
+// Utils
 import { cn } from '@/utils';
 
 export const Footer = ({

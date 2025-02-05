@@ -1,5 +1,6 @@
 'use client';
 
+// Libs
 import { extendVariants, Divider as DividerNextUI } from '@heroui/react';
 
 export const Divider = extendVariants(DividerNextUI, {

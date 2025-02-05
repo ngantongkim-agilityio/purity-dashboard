@@ -1,4 +1,7 @@
+// Libs
 import { memo, type ReactNode } from 'react';
+
+// Utils
 import { cn } from '@/utils/styles';
 
 const COLORS = {
