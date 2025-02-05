@@ -15,7 +15,7 @@
 ## Target
 
 - Understand and apply new features of NextJS 15
-- Utilize NextUI to create and customize UI components that match the design.
+- Utilize HeroUI to create and customize UI components that match the design.
 - Build a web application that meets requirements
 - Check and measure by PageSpeed as well
 
@@ -73,13 +73,27 @@ Build a Purity dashboard to manage authors:
 │   ├── actions
 │   ├── app
 │   ├── components
+│   ├── configs
 │   ├── constants
 │   ├── hooks
+│   ├── icons
+│   ├── layouts
+│   ├── schemas
+│   ├── sections
+│   ├── services
 │   ├── themes
 │   ├── types
 │   ├── utils
 ├── .editorconfig
+├── .env.example
 ├── .gitignore
+├── .npmrc
+├── .prettierignore
+├── .prettierrc
+├── commitlint.config.ts
+├── eslint.config.mjs
+├── jest.config.ts
+├── jest.setup.ts
 ├── next.config.ts
 ├── package.json
 ├── pnpm-lock.yaml
@@ -111,9 +125,12 @@ Make sure you install packages with correct version below:
 
 ### Build and Run app
 
-| Command          | Action                                     | Port                  |
-| :--------------- | :----------------------------------------- | :-------------------- |
-| `$ pnpm install` | Install packages dependencies              | N/A                   |
-| `$ pnpm build`   | Build app with optimized production mode   | N/A                   |
-| `$ pnpm start`   | Starts the application in production mode. | http://localhost:3000 |
-| `$ pnpm dev`     | Run the app in development mode            | http://localhost:3000 |
+| Command            | Action                                     | Port                  |
+| :----------------- | :----------------------------------------- | :-------------------- |
+| `$ pnpm install`   | Install packages dependencies              | N/A                   |
+| `$ pnpm build`     | Build app with optimized production mode   | N/A                   |
+| `$ pnpm start`     | Starts the application in production mode. | http://localhost:3000 |
+| `$ pnpm dev`       | Run the app in development mode            | http://localhost:3000 |
+| `$ pnpm storybook` | Run Storybook.                             | http://localhost:6006 |
+| `$ pnpm test`      | Run Unit Test                              | N/A                   |
+| `$ pnpm coverage`  | Generate code coverage                     | N/A                   |
