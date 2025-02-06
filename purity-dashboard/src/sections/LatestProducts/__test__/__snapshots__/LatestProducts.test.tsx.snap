@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LatestProducts component Should render LatestProducts component with default props 1`] = `<div />`;

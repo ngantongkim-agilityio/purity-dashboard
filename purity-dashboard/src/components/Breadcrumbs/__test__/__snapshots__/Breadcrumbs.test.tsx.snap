@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs component Should render Breadcrumbs component with default props 1`] = `
+<div>
+  <nav
+    aria-label="Breadcrumb"
+    class="mb-6 block"
+  >
+    <ol
+      class="flex text-xl md:text-2xl"
+    />
+  </nav>
+</div>
+`;

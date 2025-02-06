@@ -1,7 +1,7 @@
 import { CheckIcon, ClockIcon } from '@heroicons/react/24/outline';
 import { cn } from '@/utils';
 
-export const Status = ({ status }: { status: string }) => {
+export const Status = ({ status = 'pending' }: { status?: string }) => {
   return (
     <span
       className={cn('inline-flex items-center rounded-full px-2 py-1 text-xs', {

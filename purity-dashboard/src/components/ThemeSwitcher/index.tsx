@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes';
 import { Button } from '@/components';
 import { SunIcon, MoonIcon } from '@/icons';
 
-const ThemeSwitcher = () => {
+export const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -27,8 +27,8 @@ const ThemeSwitcher = () => {
     <Button
       aria-label='theme switcher'
       isIconOnly
-      onClick={handleSwitchTheme}
       className='bg-transparent'
+      onClick={handleSwitchTheme}
     >
       {theme === 'light' ? (
         <MoonIcon className='h-5 w-5 text-primary' />
@@ -40,5 +40,3 @@ const ThemeSwitcher = () => {
 };
 
 ThemeSwitcher.displayName = 'ThemeSwitcher';
-
-export default ThemeSwitcher;

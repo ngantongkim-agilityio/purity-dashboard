@@ -21,7 +21,7 @@ const SIZES = {
   xxs: 'text-xxs',
   xs: 'text-xs',
   sm: 'text-sm',
-  md: 'text-base',
+  md: 'text-md',
   lg: 'text-lg',
   xl: 'text-xl',
   '2xl': 'text-2xl',
@@ -29,7 +29,7 @@ const SIZES = {
 };
 
 interface TextProps {
-  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span';
   color?:
     | 'primary'
     | 'secondary'

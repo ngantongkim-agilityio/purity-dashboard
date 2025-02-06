@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateProductForm component Should render CreateProductForm component with default props 1`] = `
+<div>
+  <form
+    action="javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')"
+  >
+    <div
+      class="rounded-md bg-gray-50 p-4 md:p-6"
+    >
+      <div
+        class="mb-4"
+      >
+        <label
+          class="mb-2 block text-sm font-medium"
+          for="author"
+        >
+          Choose author
+        </label>
+        <div
+          class="relative"
+        >
+          <select
+            aria-describedby="author-error"
+            class="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+            id="author"
+            name="authorId"
+          >
+            <option
+              disabled=""
+              selected=""
+              value=""
+            >
+              Select a author
+            </option>
+          </select>
+          <svg
+            aria-hidden="true"
+            class="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500"
+            data-slot="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div
+          aria-atomic="true"
+          aria-live="polite"
+          id="author-error"
+        />
+      </div>
+      <div
+        class="mb-4"
+      >
+        <label
+          class="mb-2 block text-sm font-medium"
+          for="amount"
+        >
+          Choose an amount
+        </label>
+        <div
+          class="relative mt-2 rounded-md"
+        >
+          <div
+            class="relative"
+          >
+            <input
+              class="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+              id="amount"
+              name="amount"
+              placeholder="Enter USD amount"
+              step="0.01"
+              type="number"
+            />
+            <svg
+              aria-hidden="true"
+              class="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900"
+              data-slot="icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          aria-atomic="true"
+          aria-live="polite"
+          id="amount-error"
+        />
+      </div>
+      <fieldset>
+        <legend
+          class="mb-2 block text-sm font-medium"
+        >
+          Set the product status
+        </legend>
+        <div
+          class="rounded-md border border-gray-200 bg-white px-[14px] py-3"
+        >
+          <div
+            class="flex gap-4"
+          >
+            <div
+              class="flex items-center"
+            >
+              <input
+                class="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
+                id="pending"
+                name="status"
+                type="radio"
+                value="pending"
+              />
+              <label
+                class="ml-2 flex cursor-pointer items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-600"
+                for="pending"
+              >
+                Pending 
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4"
+                  data-slot="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div
+              class="flex items-center"
+            >
+              <input
+                class="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
+                id="paid"
+                name="status"
+                type="radio"
+                value="paid"
+              />
+              <label
+                class="ml-2 flex cursor-pointer items-center gap-1.5 rounded-full bg-green-500 px-3 py-1.5 text-xs font-medium text-white"
+                for="paid"
+              >
+                Paid 
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4"
+                  data-slot="icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m4.5 12.75 6 6 9-13.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-atomic="true"
+          aria-live="polite"
+          id="status-error"
+        />
+      </fieldset>
+    </div>
+    <div
+      class="mt-6 flex justify-end gap-4"
+    >
+      <a
+        class="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
+        href="/dashboard/products"
+      >
+        Cancel
+      </a>
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent font-semibold p bg-primary uppercase text-white px-4 min-w-20 h-9 text-xs gap-2 rounded-xl"
+        type="submit"
+      >
+        Create Product
+      </button>
+    </div>
+  </form>
+</div>
+`;

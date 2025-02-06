@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch component Should render Switch component with default props 1`] = `
+<div>
+  <label
+    class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
+  >
+    <input
+      aria-labelledby=":r0:"
+      class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+      role="switch"
+      type="checkbox"
+      value=""
+    />
+    <span
+      aria-hidden="true"
+      class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground transition-background w-12 h-7"
+    >
+      <span
+        class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right pointer-events-none transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4 w-5 h-5 text-md group-data-[selected=true]:ms-5"
+      />
+    </span>
+  </label>
+</div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavLinks component Should render NavLinks component with default props 1`] = `
+<div>
+  <nav
+    class="flex grow flex-row md:grow-0 justify-between md:flex-col space-x-4 md:space-x-0 md:space-y-2 sm:mr-16 md:mr-0"
+  />
+</div>
+`;

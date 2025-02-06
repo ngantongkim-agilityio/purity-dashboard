@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination component Should render Pagination component with default props 1`] = `
+<div>
+  <div
+    class="inline-flex"
+  >
+    <a
+      class="flex h-10 w-10 items-center justify-center rounded-md border hover:bg-gray-100 mr-2 md:mr-4"
+      href="undefined?query=test&page=2"
+    >
+      <svg
+        aria-hidden="true"
+        class="w-4"
+        data-slot="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+    <div
+      class="flex -space-x-px"
+    >
+      <a
+        class="flex h-10 w-10 items-center justify-center text-sm border rounded-l-md hover:bg-gray-100"
+        href="undefined?query=test&page=1"
+      >
+        1
+      </a>
+      <a
+        class="flex h-10 w-10 items-center justify-center text-sm border hover:bg-gray-100"
+        href="undefined?query=test&page=2"
+      >
+        2
+      </a>
+      <div
+        class="flex h-10 w-10 items-center justify-center text-sm border rounded-r-md z-10 bg-blue-600 border-blue-600 text-white"
+      >
+        3
+      </div>
+    </div>
+    <div
+      class="flex h-10 w-10 items-center justify-center rounded-md border pointer-events-none text-gray-300 ml-2 md:ml-4"
+    >
+      <svg
+        aria-hidden="true"
+        class="w-4"
+        data-slot="icon"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

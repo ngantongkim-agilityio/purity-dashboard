@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider component Should render Divider component with default props 1`] = `
+<div>
+  <hr
+    class="w-full h-divider shrink-0 bg-divider border-none"
+    role="separator"
+    variant="default"
+  />
+</div>
+`;

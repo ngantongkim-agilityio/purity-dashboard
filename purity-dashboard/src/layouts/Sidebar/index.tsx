@@ -22,6 +22,7 @@ export const Sidebar = () => {
 
     await signOut();
   };
+
   return (
     <aside className='flex h-full flex-col p-8 min-w-[310px] space-y-6'>
       <Link className='flex justify-start space-x-3 px-4 py-2' href='/'>

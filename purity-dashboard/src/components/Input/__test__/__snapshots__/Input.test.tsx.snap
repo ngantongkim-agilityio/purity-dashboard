@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component Should render Input component with default props 1`] = `
+<div>
+  <div
+    class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+    data-has-value="true"
+    data-slot="base"
+  >
+    <div
+      class="flex flex-col h-20"
+      data-slot="main-wrapper"
+    >
+      <div
+        class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium data-[hover=true]:border-default-400 group-data-[focus=true]:border-default-foreground min-h-10 transition-background !duration-150 transition-colors motion-reduce:transition-none bg-primary-100 border-secondary-50 data-[hover=true]:!bg-primary-100 group-data-[focus=true]:!bg-primary-100 data-[focus=true]:!border-secondary-200 group-data-[invalid=true]:border-danger h-auto py-4 rounded-2xl"
+        data-slot="input-wrapper"
+        style="cursor: text;"
+      >
+        <div
+          class="inline-flex w-full items-center h-full box-border"
+          data-slot="inner-wrapper"
+        >
+          <input
+            aria-label=" "
+            class="w-full font-normal !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-secondary-300 placeholder:text-secondary-200 bg-primary-100 text-sm mx-2 group-data-[invalid=true]:!text-danger rounded"
+            data-slot="input"
+            id="react-aria-:r0:"
+            title=""
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

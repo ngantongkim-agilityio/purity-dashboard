@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component Should render Header component with default props 1`] = `
+<div>
+  <section
+    class="flex h-full flex-col px-3 py-4 md:px-2"
+  />
+</div>
+`;

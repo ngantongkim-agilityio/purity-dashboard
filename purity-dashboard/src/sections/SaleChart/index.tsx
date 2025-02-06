@@ -1,13 +1,12 @@
 // Components
 import { Text } from '@/components';
-import { fetchRevenue } from '@/services';
+import { CalendarIcon } from '@heroicons/react/24/outline';
 
-// Actions
-// import { fetchRevenue } from '@/actions/revenue';
+// Services
+import { fetchRevenue } from '@/services';
 
 // Utils
 import { generateYAxis } from '@/utils';
-import { CalendarIcon } from '@heroicons/react/24/outline';
 
 export const SaleChart = async () => {
   const { revenue } = await fetchRevenue();

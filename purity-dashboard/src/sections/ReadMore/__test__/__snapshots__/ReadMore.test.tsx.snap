@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReadMore component Should render ReadMore component with default props 1`] = `
+<div>
+  <div
+    class="flex flex-col xl:flex-row xl:justify-between gap-6"
+  >
+    <div
+      class="xl:w-3/5 flex justify-between w-full bg-primary-100 rounded-xl p-4 shadow-secondary-50 shadow-md"
+    >
+      <div
+        class="max-w-[330px] flex flex-col justify-between"
+      >
+        <div
+          class="space-y-0.5"
+        >
+          <p
+            class="text-xs font-bold text-secondary-200"
+          >
+            Build by developers
+          </p>
+          <p
+            class="text-secondary-300 text-lg font-bold"
+          >
+            Purity UI Dashboard
+          </p>
+          <p
+            class="font-normal text-sm text-secondary-200"
+          >
+            From colors, cards, typography to complex elements, you will find the full documentation.
+          </p>
+        </div>
+        <a
+          class="flex items-center gap-1"
+          href="#"
+        >
+          <p
+            class="text-sm text-xxs font-bold"
+          >
+            Read more
+          </p>
+          <svg
+            class="w-3 h-3 text-secondary-300"
+            fill="none"
+          >
+            <path
+              d="M6.281 2.625 9.656 6 6.281 9.375M9.187 6H2.344"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.125"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        class="relative w-[360px] h-[255px]"
+      >
+        <img
+          alt="purity ui dashboard read more"
+          class="transition-opacity object-cover duration-200 ease-in-out opacity-80 rounded-xl"
+          data-nimg="fill"
+          decoding="async"
+          sizes="100vw"
+          src="http://localhost/_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbuild-read-more.webp&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+        />
+      </div>
+    </div>
+    <div
+      class="xl:w-2/5 bg-primary-100 rounded-xl p-4 shadow-secondary-50 shadow-md"
+    >
+      <div
+        class="relative rounded-xl w-full h-[255px]"
+      >
+        <img
+          alt="rockets read more background"
+          class="transition-opacity object-cover duration-200 ease-in-out opacity-80 rounded-xl"
+          data-nimg="fill"
+          decoding="async"
+          sizes="100vw"
+          src="http://localhost/_next/image?url=%2Fimages%2Frockets-read-more.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fimages%2Frockets-read-more.webp&w=640&q=75 640w, /_next/image?url=%2Fimages%2Frockets-read-more.webp&w=750&q=75 750w, /_next/image?url=%2Fimages%2Frockets-read-more.webp&w=828&q=75 828w, /_next/image?url=%2Fimages%2Frockets-read-more.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Frockets-read-more.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Frockets-read-more.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Frockets-read-more.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Frockets-read-more.webp&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+        />
+        <div
+          class="absolute top-0 left-0 z-10 p-4 h-full w-full flex flex-col justify-between"
+        >
+          <div
+            class="space-y-0.5"
+          >
+            <p
+              class="text-primary-100 font-bold text-lg"
+            >
+              Work with the Rockets
+            </p>
+            <p
+              class="text-primary-100 text-sm font-light whitespace-pre-line"
+            >
+              Wealth creation is an evolutionarily recent positive-sum game.
+              
+
+              It is all about who take the opportunity first.
+            </p>
+          </div>
+          <a
+            class="flex items-center gap-1 text-primary-100"
+            href="#"
+          >
+            <p
+              class="font-normal text-xxs"
+            >
+              Read more
+            </p>
+            <svg
+              class="w-3 h-3 text-primary-100"
+              fill="none"
+            >
+              <path
+                d="M6.281 2.625 9.656 6 6.281 9.375M9.187 6H2.344"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.125"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

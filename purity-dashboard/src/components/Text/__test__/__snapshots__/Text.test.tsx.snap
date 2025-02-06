@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component Should render Text component with default props 1`] = `
+<div>
+  <p
+    class="text-primary-100 font-normal text-sm"
+  >
+    Test
+  </p>
+</div>
+`;

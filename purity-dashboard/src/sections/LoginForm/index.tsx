@@ -26,7 +26,7 @@ export const LoginForm = memo(() => {
   const authenticateWithRememberMe = authenticate.bind(null, remember);
   const [state, formAction, isPending] = useActionState(
     authenticateWithRememberMe,
-    initialState
+    undefined
   );
 
   const [errors, setResetErrors] = useState(state?.errors);

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Should render Footer component with default props 1`] = `
+<div>
+  <footer
+    class="w-full flex flex-col gap-6 lg:flex-row bg-transparent py-6"
+  >
+    <p
+      class="font-normal text-xs text-secondary-200 justify-center lg:w-1/2"
+    >
+      @ 2025, Made with ❤️ by 
+      <a
+        class="text-primary font-bold"
+        href="/create-tim"
+      >
+        Creative Tim
+      </a>
+       & 
+      <a
+        class="text-primary font-bold"
+        href="/simple"
+      >
+        Simmmple
+      </a>
+       
+      for a better web
+    </p>
+    <nav
+      class="lg:w-1/2 flex justify-center gap-8 lg:justify-end"
+    >
+      <a
+        class="text-xs text-secondary-200"
+        href="/create-tim"
+      >
+        Creative Tim
+      </a>
+      <a
+        class="text-xs text-secondary-200"
+        href="/simple"
+      >
+        Simple
+      </a>
+      <a
+        class="text-xs text-secondary-200"
+        href="/blog"
+      >
+        Blog
+      </a>
+      <a
+        class="text-xs text-secondary-200"
+        href="/license"
+      >
+        License
+      </a>
+    </nav>
+  </footer>
+</div>
+`;

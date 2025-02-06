@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm component Should render LoginForm component with default props 1`] = `
+<div>
+  <form
+    action="javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')"
+    class="flex flex-col w-full mt-9 gap-y-8"
+  >
+    <div>
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="flex flex-col h-20"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium data-[hover=true]:border-default-400 group-data-[focus=true]:border-default-foreground min-h-10 transition-background !duration-150 transition-colors motion-reduce:transition-none bg-primary-100 border-secondary-50 data-[hover=true]:!bg-primary-100 group-data-[focus=true]:!bg-primary-100 data-[focus=true]:!border-secondary-200 group-data-[invalid=true]:border-danger h-auto py-4 rounded-2xl"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden text-sm group-data-[invalid=true]:!text-secondary-300 top-[20px]"
+              data-slot="label"
+              for="react-aria-:r0:"
+              id="react-aria-:r1:"
+            >
+              Email
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-label="Email"
+                aria-labelledby="react-aria-:r0: react-aria-:r1:"
+                class="w-full font-normal !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-secondary-300 placeholder:text-secondary-200 bg-primary-100 text-sm mx-2 group-data-[invalid=true]:!text-danger rounded"
+                data-slot="input"
+                id="react-aria-:r0:"
+                name="email"
+                placeholder="Your email address"
+                title=""
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="flex flex-col h-20"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium data-[hover=true]:border-default-400 group-data-[focus=true]:border-default-foreground min-h-10 transition-background !duration-150 transition-colors motion-reduce:transition-none bg-primary-100 border-secondary-50 data-[hover=true]:!bg-primary-100 group-data-[focus=true]:!bg-primary-100 data-[focus=true]:!border-secondary-200 group-data-[invalid=true]:border-danger h-auto py-4 rounded-2xl"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden text-sm group-data-[invalid=true]:!text-secondary-300 top-[20px]"
+              data-slot="label"
+              for="react-aria-:r5:"
+              id="react-aria-:r6:"
+            >
+              Password
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-label="Password"
+                aria-labelledby="react-aria-:r5: react-aria-:r6:"
+                class="w-full font-normal !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-secondary-300 placeholder:text-secondary-200 bg-primary-100 text-sm mx-2 group-data-[invalid=true]:!text-danger rounded"
+                data-slot="input"
+                id="react-aria-:r5:"
+                name="password"
+                placeholder="Your email address"
+                title=""
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <label
+        aria-label="Remember"
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
+        id="remember"
+      >
+        <input
+          aria-label="Remember me"
+          aria-labelledby=":ra:"
+          class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+          name="remember"
+          role="switch"
+          type="checkbox"
+          value=""
+        />
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground transition-background w-12 h-7"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right pointer-events-none transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4 w-5 h-5 text-md group-data-[selected=true]:ms-5"
+          />
+        </span>
+        <span
+          class="relative text-foreground select-none ms-2 text-medium"
+          id=":ra:"
+        >
+          Remember me
+        </span>
+      </label>
+    </div>
+    <div
+      class="flex flex-col gap-y-5"
+    >
+      <div
+        class="h-[60px] flex flex-col justify-center"
+      >
+        <button
+          aria-label="Login button"
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent font-semibold p bg-primary uppercase text-white w-full h-12 text-xs gap-2 rounded-xl"
+          type="submit"
+        >
+          Sign in
+        </button>
+      </div>
+      <div
+        class="flex justify-center w-full gap-1"
+      >
+        <p
+          class="text-secondary-200 text-sm"
+        >
+          Don’t have an account?
+        </p>
+        <a
+          class="font-semibold text-primary text-sm"
+          href="/signup"
+        >
+          Sign up
+        </a>
+      </div>
+    </div>
+  </form>
+</div>
+`;
