@@ -50,8 +50,8 @@ export const SaleChart = async () => {
         </div>
       </div>
       <div className='flex items-center pt-3 space-x-2'>
-        <CalendarIcon className='h-5 w-5 text-secondary-300' />
-        <Text color='tertiary'>Last 12 months</Text>
+        <CalendarIcon className='h-5 w-5 text-secondary-200' />
+        <Text className='text-secondary-200'>Last 12 months</Text>
       </div>
     </div>
   );

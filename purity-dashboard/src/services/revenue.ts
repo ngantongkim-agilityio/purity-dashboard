@@ -6,11 +6,12 @@ export const fetchRevenue = async (): Promise<{
   error: string | null;
 }> => {
   try {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const url = `${BASE_API}/${ROUTE_ENDPOINT.REVENUE}`;
     const response = await fetch(url, {
       next: {
         tags: ['revenue'],
-        revalidate: 3600
+        revalidate: 10
       }
     });
     const revenue = await response.json();

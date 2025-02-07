@@ -1,3 +1,9 @@
+import { ThemeSwitcher } from '@/components';
+
 export const Header = () => {
-  return <section className='flex h-full flex-col px-3 py-4 md:px-2'></section>;
+  return (
+    <section className='flex flex-row justify-end'>
+      <ThemeSwitcher className='static p-0' />
+    </section>
+  );
 };

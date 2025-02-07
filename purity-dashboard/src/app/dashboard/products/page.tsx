@@ -1,18 +1,18 @@
-// libs
+// Libs
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PlusIcon } from '@heroicons/react/24/outline';
 
-// components
+// Components
 import { Pagination, SearchInput } from '@/components';
 
-// sections
-import { LatestProductsSkeleton } from '@/sections/LatestProductsSkeleton';
+// Sections
 import { ProductsTable } from '@/sections';
 
-// actions
+// Actions
 import { fetchProductsPages } from '@/services';
+import { TableSkeleton } from '@/sections/TableSkeleton';
 
 export const metadata: Metadata = {
   title: 'Products'
@@ -38,13 +38,13 @@ const ProductsPage = async (props: {
         <SearchInput placeholder='Search products...' />
         <Link
           href='/dashboard/products/create'
-          className='flex h-10 items-center rounded-lg bg-blue-600 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'
+          className='flex h-10 items-center rounded-lg bg-transparent border-primary border-3 px-4 text-sm font-medium text-primary transition-colors hover:border-secondary-200 hover:text-secondary-200 focus-visible:text-primary-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-100'
         >
           <span className='hidden md:block'>Create Product</span>{' '}
           <PlusIcon className='h-5 md:ml-4' />
         </Link>
       </div>
-      <Suspense key={query + currentPage} fallback={<LatestProductsSkeleton />}>
+      <Suspense key={query + currentPage} fallback={<TableSkeleton />}>
         <ProductsTable query={query} currentPage={currentPage} />
       </Suspense>
       <div className='mt-5 flex w-full justify-center'>

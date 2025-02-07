@@ -20,7 +20,7 @@ export const LatestProducts = async () => {
         Latest Products
       </Text>
       <div className='flex grow flex-col justify-between'>
-        <div className='bg-white px-6'>
+        <div className='bg-primary-100 px-6'>
           {products.map((product, i) => {
             return (
               <div
@@ -57,8 +57,8 @@ export const LatestProducts = async () => {
           })}
         </div>
         <div className='flex items-center pb-2 pt-6'>
-          <ArrowPathIcon className='h-5 w-5 text-gray-500' />
-          <h3 className='ml-2 text-sm text-gray-500 '>Updated just now</h3>
+          <ArrowPathIcon className='h-5 w-5 text-secondary-200' />
+          <h3 className='ml-2 text-sm text-secondary-200 '>Updated just now</h3>
         </div>
       </div>
     </div>

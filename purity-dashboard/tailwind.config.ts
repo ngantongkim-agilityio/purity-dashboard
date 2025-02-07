@@ -2,6 +2,7 @@ import {heroui} from "@heroui/react"
 
 import {
   colors,
+  darkColors,
   baseColors,
   fontSize,
 } from './src/themes';
@@ -17,7 +18,7 @@ module.exports = {
     extend: {
       colors: {
         ...baseColors,
-        ...colors,
+        // ...colors,
       },
       fontSize,
       fontFamily: {
@@ -32,7 +33,9 @@ module.exports = {
       light: {
         colors,
       },
-      dark: {},
+      dark: {
+        colors: darkColors,
+      },
     }
   })],
 }

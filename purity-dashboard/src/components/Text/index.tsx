@@ -18,7 +18,7 @@ const COLORS = {
 };
 
 const SIZES = {
-  xxs: 'text-xxs',
+  '2xs': 'text-2xs',
   xs: 'text-xs',
   sm: 'text-sm',
   md: 'text-md',
@@ -41,7 +41,7 @@ interface TextProps {
     | 'warning'
     | 'error'
     | 'default';
-  size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
+  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
   type?: 'nowrap' | 'wrap';
   className?: string;
   children: ReactNode;
@@ -59,7 +59,7 @@ export const Text = memo(
 
     return (
       <TextName
-        className={cn(`${COLORS[color]} ${SIZES[size]} ${className || ''}`)}
+        className={cn(`${COLORS[color]} ${SIZES[size]}`, `${className || ''}`)}
       >
         {children}
       </TextName>

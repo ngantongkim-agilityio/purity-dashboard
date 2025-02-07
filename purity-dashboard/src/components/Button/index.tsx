@@ -15,7 +15,7 @@ export const Button = memo(
       color: {
         default: 'bg-transparent text-primary',
         primary: 'bg-primary uppercase text-white',
-        secondary: 'bg-primary-100 uppercase text-grey-300'
+        secondary: 'bg-primary-100 uppercase text-secondary-300'
       },
 
       isIconOnly: {

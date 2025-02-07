@@ -20,7 +20,7 @@ export const Breadcrumbs = ({ breadcrumbs }: { breadcrumbs: Breadcrumb[] }) => {
             key={breadcrumb.href}
             aria-current={breadcrumb.active}
             className={cn(
-              breadcrumb.active ? 'text-gray-900' : 'text-gray-500'
+              breadcrumb.active ? 'text-secondary-300' : 'text-secondary-200'
             )}
           >
             <Link href={breadcrumb.href}>{breadcrumb.label}</Link>

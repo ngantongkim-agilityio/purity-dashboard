@@ -9,6 +9,7 @@ export const fetchAnalytics = async (): Promise<{
   } | null;
   error: string | null;
 }> => {
+  await new Promise((resolve) => setTimeout(resolve, 1200));
   try {
     const url = `${BASE_API}/${ROUTE_ENDPOINT.ANALYTICS}`;
     // await new Promise((resolve) => setTimeout(resolve, 3000));

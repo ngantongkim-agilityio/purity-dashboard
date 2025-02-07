@@ -1,6 +1,8 @@
 import { CustomClassType } from '@/types';
 
-export const PowerIcon = ({ customClass = 'size-6' }: CustomClassType) => (
+export const PowerIcon = ({
+  customClass = 'w-6 h-6 text-secondary-300'
+}: CustomClassType) => (
   <svg
     fill='none'
     stroke='currentColor'

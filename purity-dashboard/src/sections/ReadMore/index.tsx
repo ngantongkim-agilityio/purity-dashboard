@@ -22,7 +22,9 @@ export const ReadMore = () => {
             </Text>
           </div>
           <Link href={'#'} className='flex items-center gap-1'>
-            <Text className='text-xxs font-bold'>Read more</Text>
+            <Text size='2xs' className='text-white font-bold'>
+              Read more
+            </Text>
             <ArrowIcon />
           </Link>
         </div>
@@ -45,10 +47,10 @@ export const ReadMore = () => {
           />
           <div className='absolute top-0 left-0 z-10 p-4 h-full w-full flex flex-col justify-between'>
             <div className='space-y-0.5'>
-              <Text color='title' size='lg'>
+              <Text color='title' size='lg' className='text-white'>
                 Work with the Rockets
               </Text>
-              <Text className='font-light whitespace-pre-line'>
+              <Text className='font-light whitespace-pre-line text-white'>
                 Wealth creation is an evolutionarily recent positive-sum game.
                 {`\n`}
                 It is all about who take the opportunity first.
@@ -58,8 +60,10 @@ export const ReadMore = () => {
               href={'#'}
               className='flex items-center gap-1 text-primary-100'
             >
-              <Text size='xxs'>Read more</Text>
-              <ArrowIcon customClass='w-3 h-3 text-primary-100' />
+              <Text size='2xs' className='text-white font-bold'>
+                Read more
+              </Text>
+              <ArrowIcon customClass='w-3 h-3 text-white' />
             </Link>
           </div>
         </div>

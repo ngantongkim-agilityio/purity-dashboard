@@ -37,7 +37,7 @@ export const NavLinks = ({ links = DASHBOARD_NAV_LINKS }: NavLinksProps) => {
             key={name}
             href={href}
             className={cn(
-              'flex grow md:grow-0 justify-center items-center gap-3 rounded-xl bg-secondary-100 text-secondary-200 text-xs font-bold hover:bg-secondary-50 md:flex-none md:justify-start p-3',
+              'flex grow md:grow-0 justify-center items-center gap-3 rounded-xl bg-transparent text-secondary-200 text-xs font-bold hover:bg-secondary-50 md:flex-none md:justify-start p-3',
               {
                 'bg-primary-100 text-secondary-300 shadow-secondary-50 shadow-md':
                   pathname === href

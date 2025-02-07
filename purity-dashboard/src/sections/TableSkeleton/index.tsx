@@ -5,7 +5,7 @@ export const TableSkeleton = () => {
   return (
     <div className='mt-6 flow-root'>
       <div className='inline-block min-w-full align-middle'>
-        <div className='rounded-lg bg-gray-50 p-2 md:pt-0'>
+        <div className='rounded-lg bg-primary-100 p-2 md:pt-0'>
           <div className='md:hidden'>
             <TableMobileSkeleton />
             <TableMobileSkeleton />
@@ -40,7 +40,7 @@ export const TableSkeleton = () => {
                 </th>
               </tr>
             </thead>
-            <tbody className='bg-white'>
+            <tbody className='bg-primary-100'>
               <TableRowSkeleton />
               <TableRowSkeleton />
               <TableRowSkeleton />

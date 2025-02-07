@@ -7,6 +7,21 @@ import { extendVariants, Switch as NextUISwitch } from '@heroui/react';
 export const Switch = memo(
   extendVariants(NextUISwitch, {
     variants: {
+      color: {
+        default: {
+          wrapper: [
+            'group-data-[selected=true]:bg-default-400',
+            'group-data-[selected=true]:text-default-foreground'
+          ]
+        },
+        primary: {
+          wrapper: [
+            'bg-primary-200',
+            'group-data-[selected=true]:bg-primary',
+            'group-data-[selected=true]:text-primary-foreground'
+          ]
+        }
+      },
       size: {
         sm: {
           wrapper: 'w-12 h-6',
@@ -32,6 +47,7 @@ export const Switch = memo(
       }
     },
     defaultVariants: {
+      color: 'primary',
       size: 'md'
     }
   })

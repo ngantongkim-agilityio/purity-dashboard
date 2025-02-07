@@ -23,10 +23,11 @@ export const fetchLatestProducts = async (): Promise<{
 }> => {
   try {
     const url = `${BASE_API}/${ROUTE_ENDPOINT.PRODUCTS.LATEST_PRODUCTS}`;
+    await new Promise((resolve) => setTimeout(resolve, 800));
     const response = await fetch(url, {
       next: {
         tags: ['latest-products'],
-        revalidate: 3600
+        revalidate: 10
       }
     });
     const products = await response.json();
