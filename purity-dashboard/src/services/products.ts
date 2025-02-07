@@ -23,11 +23,10 @@ export const fetchLatestProducts = async (): Promise<{
 }> => {
   try {
     const url = `${BASE_API}/${ROUTE_ENDPOINT.PRODUCTS.LATEST_PRODUCTS}`;
-    await new Promise((resolve) => setTimeout(resolve, 800));
     const response = await fetch(url, {
       next: {
         tags: ['latest-products'],
-        revalidate: 10
+        revalidate: 3600
       }
     });
     const products = await response.json();
@@ -53,18 +52,14 @@ export const fetchProductsPages = async (
   error: string | null;
 }> => {
   try {
-    const count = await sql`SELECT COUNT(*)
-    FROM products
-    JOIN authors ON products.author_id = authors.id
-    WHERE
-      authors.name ILIKE ${`%${query}%`} OR
-      authors.email ILIKE ${`%${query}%`} OR
-      products.amount::text ILIKE ${`%${query}%`} OR
-      products.date::text ILIKE ${`%${query}%`} OR
-      products.status ILIKE ${`%${query}%`}
-  `;
-
-    const totalPages = Math.ceil(Number(count.rows[0].count) / ITEMS_PER_PAGE);
+    const url = `${BASE_API}/${ROUTE_ENDPOINT.PRODUCTS.PRODUCTS_PAGES}?query=${query}`;
+    const response = await fetch(url, {
+      next: {
+        tags: ['products-pages'],
+        revalidate: 3600
+      }
+    });
+    const totalPages = await response.json();
 
     return {
       totalPages,
@@ -90,26 +85,14 @@ export const fetchFilteredProducts = async (
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
   try {
-    const products = await sql<ProductsTable>`
-      SELECT
-        products.id,
-        products.amount,
-        products.date,
-        products.status,
-        authors.name,
-        authors.email,
-        authors.image_url
-      FROM products
-      JOIN authors ON products.author_id = authors.id
-      WHERE
-        authors.name ILIKE ${`%${query}%`} OR
-        authors.email ILIKE ${`%${query}%`} OR
-        products.amount::text ILIKE ${`%${query}%`} OR
-        products.date::text ILIKE ${`%${query}%`} OR
-        products.status ILIKE ${`%${query}%`}
-      ORDER BY products.date DESC
-      LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
-    `;
+    const url = `${BASE_API}/${ROUTE_ENDPOINT.PRODUCTS.FILTERED_PRODUCTS}?query=${query}&offset=${offset}`;
+    const response = await fetch(url, {
+      next: {
+        tags: ['filtered-authors'],
+        revalidate: 3600
+      }
+    });
+    const products = await response.json();
 
     return { products: products.rows, error: null };
   } catch (error) {

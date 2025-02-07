@@ -12,7 +12,6 @@ export const fetchAnalytics = async (): Promise<{
   await new Promise((resolve) => setTimeout(resolve, 1200));
   try {
     const url = `${BASE_API}/${ROUTE_ENDPOINT.ANALYTICS}`;
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
     const response = await fetch(url, {
       next: {
         tags: ['analytics'],

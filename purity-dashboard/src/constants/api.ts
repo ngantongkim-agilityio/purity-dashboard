@@ -16,9 +16,13 @@ export const ROUTE_ENDPOINT = {
     SIGNUP: 'api/auth/signup',
     LOGOUT: 'api/auth/logout'
   },
+  AUTHORS: {
+    FILTERED_AUTHORS: 'api/authors/filtered-authors'
+  },
   PRODUCTS: {
     LATEST_PRODUCTS: 'api/products/latest-products',
-    PRODUCTS_PAGES: 'api/products/products-pages'
+    PRODUCTS_PAGES: 'api/products/products-pages',
+    FILTERED_PRODUCTS: 'api/products/filtered-products'
   },
   REVENUE: 'api/revenue',
   ANALYTICS: 'api/analytics'
